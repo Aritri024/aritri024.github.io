@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aritri Halder - Mechanical Engineer and Ph.D. candidate working on thermal systems, prototype builds, test and validation, and data analysis.">
+  <title>Aritri Halder | Mechanical Engineer & Researcher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">Aritri Halder</a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#about">About</a>
+      <a href="cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="eyebrow">Mechanical Engineering · Experimental R&D · Thermal Systems</div>
+      <h1>Aritri Halder</h1>
+      <h2>Ph.D. Candidate in Mechanical Engineering · University of Minnesota - Twin Cities</h2>
+      <p class="lede">Mechanical engineer with hands-on R&D experience in high-temperature thermal-fluid systems, prototype development, test and validation, instrumentation, and data analysis. Current work combines mechanical design, experimental diagnostics, automated data acquisition, and statistical analysis to evaluate system performance.</p>
+      <div class="button-row">
+        <a class="btn primary" href="#projects">View selected work</a>
+        <a class="btn secondary" href="cv.html">View CV</a>
+        <a class="btn secondary" href="Aritri_Halder_CV.pdf" download>Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Selected projects</div>
+        <div>
+          <h2 class="section-title">Research and engineering work</h2>
+          <p class="section-intro">Selected work from the resume, organized around experimental system development, diagnostics and automation, and computational thermal-fluid engineering.</p>
+        </div>
+      </div>
+      <div class="project-grid">
+        <article class="card">
+          <div class="placeholder">Add a furnace / burner photograph, CAD view, test-stand image, or results figure here.</div>
+          <div class="card-body">
+            <h3>20 kW High-Temperature Furnace & Test Platform</h3>
+            <p>Designed and validated a 20 kW experimental furnace and modular test hardware for repeatable thermal-fluid testing and engineering evaluation.</p>
+            <ul class="meta-list">
+              <li><strong>Problem:</strong> Build a high-temperature experimental platform for controlled process-development studies.</li>
+              <li><strong>What I did:</strong> Developed SolidWorks models, GD&T drawings, tolerance stack-ups and BOMs; integrated gas delivery, sensors, NI cDAQ and LabVIEW; planned a four-variable DOE.</li>
+              <li><strong>Result:</strong> Produced repeatable process data and engineering recommendations with CenterPoint Energy and U of M Duluth; achieved a 60% reduction in NOx compared with conventional burners.</li>
+            </ul>
+            <div class="tags"><span class="tag">SolidWorks</span><span class="tag">GD&T</span><span class="tag">DFM/DFA</span><span class="tag">DOE</span><span class="tag">LabVIEW</span><span class="tag">NI cDAQ</span><span class="tag">FTIR</span><span class="tag">PIV</span></div>
+            <a class="card-link" href="project-20kw-furnace.html">Project details →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="placeholder">Add a CT setup photo, optical schematic, acquisition diagram, or processed image here.</div>
+          <div class="card-body">
+            <h3>Single-Camera Rotational CT System</h3>
+            <p>Built a rotational computed-tomography measurement system and automated image-processing workflow for optical experiments.</p>
+            <ul class="meta-list">
+              <li><strong>Problem:</strong> Support CT measurements using a compact single-camera rotational mechanism.</li>
+              <li><strong>What I did:</strong> Built the mechanism and automated Python/MATLAB processing for calibration, analysis, and visualization.</li>
+              <li><strong>Result:</strong> Batch processing handled 200-300 images per condition; RCA and FMEA were used to improve reliability and safety.</li>
+            </ul>
+            <div class="tags"><span class="tag">Computed Tomography</span><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">Image Processing</span><span class="tag">RCA</span><span class="tag">FMEA</span></div>
+            <a class="card-link" href="project-ct-system.html">Project details →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="placeholder">Add a minichannel geometry, mesh, contour plot, or performance-comparison figure here.</div>
+          <div class="card-body">
+            <h3>Minichannel Heat-Sink Thermal-Fluid Optimization</h3>
+            <p>Used CFD and mesh-convergence studies to evaluate modified internal insert geometries for minichannel thermal management.</p>
+            <ul class="meta-list">
+              <li><strong>Problem:</strong> Evaluate thermal-fluid performance of minichannel heat-sink designs.</li>
+              <li><strong>What I did:</strong> Ran parameterized mesh-convergence and geometry studies in ANSYS Fluent.</li>
+              <li><strong>Result:</strong> Modified insert geometry improved minichannel thermal-fluid performance by up to 28%.</li>
+            </ul>
+            <div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">CFD</span><span class="tag">Mesh Convergence</span><span class="tag">Heat Transfer</span></div>
+            <a class="card-link" href="project-minichannel.html">Project details →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="placeholder">Add a geometry schematic, vorticity contour, wake visualization, or parameter-study figure here.</div>
+          <div class="card-body">
+            <h3>Fluid-Structure Interaction at Re = 250</h3>
+            <p>Simulated unsteady cylinder and pitching-plate interactions to compare wake behavior across controlled operating conditions.</p>
+            <ul class="meta-list">
+              <li><strong>Problem:</strong> Characterize unsteady fluid-structure interaction and wake response.</li>
+              <li><strong>What I did:</strong> Executed parallel C/C++ simulations on HPC and analyzed Strouhal-number and pitching-phase effects in Tecplot.</li>
+              <li><strong>Result:</strong> Quantified wake dynamics, vorticity, and flow separation to identify sensitivity to design and operating parameters.</li>
+            </ul>
+            <div class="tags"><span class="tag">C/C++</span><span class="tag">HPC</span><span class="tag">CFD</span><span class="tag">FSI</span><span class="tag">Tecplot</span></div>
+            <a class="card-link" href="project-fsi.html">Project details →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Experience</div>
+        <div><h2 class="section-title">Research and engineering experience</h2><p class="section-intro">Website-friendly summaries of the positions listed in the resume.</p></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Oct 2024 - Present</div>
+          <div><h3>Graduate Research Assistant</h3><h4>University of Minnesota - T.E. Murphy Engine Lab · Minneapolis, MN</h4><p>Developing and validating a 20 kW high-temperature experimental system; producing SolidWorks CAD, GD&T drawings, tolerance analyses and BOMs; integrating ammonia/methane/air delivery, sensors, NI cDAQ and LabVIEW; planning DOE campaigns; and applying FTIR, PIV, chemiluminescence, CT, Python and MATLAB for performance characterization and data processing.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">Aug 2022 - Jun 2023</div>
+          <div><h3>Research Assistant</h3><h4>Jadavpur University - Microfluidics Lab · Kolkata, India</h4><p>Executed parallel C/C++ simulations on HPC for unsteady fluid-structure interaction at Re = 250 and used Tecplot to quantify wake dynamics, vorticity and flow separation across Strouhal number and pitching phase.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">May 2022 - Jul 2022</div>
+          <div><h3>Research Intern</h3><h4>IIT Kanpur - Experimental Thermofluids Laboratory · Kanpur, India</h4><p>Performed ANSYS Fluent mesh-convergence and geometry studies for minichannel heat-sink thermal management; modified insert geometry improved thermal-fluid performance by up to 28%.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Publications</div>
+        <div><h2 class="section-title">Selected publications and presentations</h2><p class="section-intro">Publication titles and statuses are preserved from the resume. Add DOI, paper, and code links when available.</p></div>
+      </div>
+      <div class="pub-list">
+        <div class="pub"><div class="pub-title">Experimental investigation of a 20 kW atmospheric pressure pure ammonia jet-swirl burner</div><div class="pub-meta">A. Halder, C. Goertemiller, A. Hoxie, and W. F. Northrop · Proceedings of the Combustion Institute · 2026</div><div class="pub-links"><span class="muted-link">Paper [add link]</span> · <span class="muted-link">DOI [add link]</span> · <span class="muted-link">Code [add link]</span></div></div>
+        <div class="pub"><div class="pub-title">Computer simulations on heat transfer enhancement in a minichannel heat sink using modified butterfly inserts</div><div class="pub-meta">A. Halder, R. Pandey, and U. Madanan · ISHMT-ASTFE Heat and Mass Transfer Conference · pp. 149-154 · 2024</div><div class="pub-links"><span class="muted-link">Paper [add link]</span> · <span class="muted-link">DOI [add link]</span> · <span class="muted-link">Code [add link]</span></div></div>
+        <div class="pub"><div class="pub-title">Stability and Emissions Profile of a 120 kW Fuel-Flexible Jet-Swirl Burner Operating on Ammonia</div><div class="pub-meta">A. Halder et al. · In progress; Transformative Energy</div><div class="pub-links"><span class="muted-link">Paper [not yet available]</span> · <span class="muted-link">Code [add later if applicable]</span></div></div>
+        <div class="pub"><div class="pub-title">Technical presentations</div><div class="pub-meta">Five oral/poster presentations at international and U.S. technical meetings, including ISOC Kyoto (2026), the 14th U.S. National Combustion Meeting (2025), and the 4th Symposium on Ammonia Energy (2025).</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <div class="section-head"><div class="section-kicker">Education</div><div><h2 class="section-title">Education</h2></div></div>
+      <div class="timeline">
+        <div class="timeline-item"><div class="timeline-date">Expected June 2027</div><div><h3>Ph.D., Mechanical Engineering</h3><h4>University of Minnesota - Twin Cities · Minneapolis, MN</h4></div></div>
+        <div class="timeline-item"><div class="timeline-date">July 2023</div><div><h3>B.E., Mechanical Engineering</h3><h4>Jadavpur University · Kolkata, India</h4></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head"><div class="section-kicker">Skills</div><div><h2 class="section-title">Technical skills</h2><p class="section-intro">Grouped directly from the skill categories in the resume.</p></div></div>
+      <div class="skill-groups">
+        <div class="skill-group"><h3>Mechanical Design & Manufacturing</h3><p>SolidWorks 3D modeling, engineering drawings, GD&T, DFM/DFA, tolerance stack-up, fit/clearance analysis, BOMs, materials selection, prototyping, AutoCAD, Autodesk Fusion 360.</p></div>
+        <div class="skill-group"><h3>Instrumentation, Test & Characterization</h3><p>NI cDAQ, LabVIEW, mass flow controllers, pressure/temperature sensors, sensor integration, calibration, synchronized data acquisition, test automation, PIV, FTIR spectroscopy, optical diagnostics, chemiluminescence imaging, CTC.</p></div>
+        <div class="skill-group"><h3>Programming & Data Analysis</h3><p>Python, MATLAB, C/C++, Microsoft Excel, Tecplot, image processing, workflow automation, data visualization, statistical analysis, technical reporting.</p></div>
+        <div class="skill-group"><h3>Modeling & Simulation</h3><p>ANSYS Fluent, FVM, FEM, CFD, heat transfer, thermal-fluid modeling, numerical methods, mesh convergence, HPC, Cantera.</p></div>
+        <div class="skill-group"><h3>Quality & Continuous Improvement</h3><p>FMEA, RCA, DOE, corrective-action problem solving, continuous improvement, process characterization, statistical analysis, process controls, SOPs, calibration and measurement-system validation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head"><div class="section-kicker">About</div><div><h2 class="section-title">About me</h2></div></div>
+      <div class="about-grid">
+        <div>
+          <p>I am a Ph.D. candidate in Mechanical Engineering at the University of Minnesota - Twin Cities with hands-on R&D experience in thermal-fluid systems, prototype development, test and validation, instrumentation, and data analysis. My current research at the T.E. Murphy Engine Lab includes development of a 20 kW high-temperature experimental platform, mechanical design in SolidWorks, automated flow and sensor control using NI cDAQ and LabVIEW, and characterization using FTIR, PIV, chemiluminescence, and computed tomography. My earlier work includes CFD studies of minichannel heat-sink performance and HPC simulations of fluid-structure interaction. Across these projects, I use experimental and computational methods to understand system behavior, improve performance, and translate test results into engineering decisions.</p>
+        </div>
+        <div class="contact-box">
+          <ul class="info-list">
+            <li><strong>Current role:</strong><br>Graduate Research Assistant, T.E. Murphy Engine Lab</li>
+            <li><strong>Location:</strong><br>Minneapolis, MN</li>
+            <li><strong>Awards:</strong><br>Chester E. Dekko Fdn Endowed Graduate Fellowship, 2024-2025<br>Best Abstract - Thermal Applications, 4th Symposium on Ammonia Energy, 2025</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head"><div class="section-kicker">Contact</div><div><h2 class="section-title">Get in touch</h2><p class="section-intro">Professional contact and profile links.</p></div></div>
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:aritrihalder2001@gmail.com">aritrihalder2001@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+19522208718">952-220-8718</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aritri-halder/" target="_blank" rel="noopener">linkedin.com/in/aritri-halder</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Aritri024" target="_blank" rel="noopener">github.com/Aritri024</a></p>
+        <p><strong>Google Scholar:</strong> <span class="muted-link">Add profile link when available</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2026 Aritri Halder. Built as a simple academic and engineering portfolio.</div>
+</footer>
+
+</body>
+</html>
