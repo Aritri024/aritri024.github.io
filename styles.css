@@ -2248,3 +2248,176 @@ main > section:nth-child(even) {
 
 
 }
+
+/* =========================================================
+   COMPACT PROJECT PAGE SPACING
+   Paste at the VERY BOTTOM of styles.css
+========================================================= */
+
+/* Slightly shorter video hero */
+.video-project-hero {
+  min-height: 470px;
+}
+
+.video-project-hero__content {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+
+/* Less empty space around main content */
+.project-page {
+  padding-top: 38px;
+  padding-bottom: 80px;
+}
+
+
+/* Quick-facts block closer to next section */
+.project-facts {
+  margin-bottom: 55px;
+}
+
+
+/* Main vertical section spacing */
+.project-section {
+  margin-top: 58px;
+}
+
+
+/* Slightly tighter headings */
+.project-section h2 {
+  margin-bottom: 14px;
+}
+
+
+/* Tighter paragraph rhythm */
+.project-section > p {
+  margin-bottom: 13px;
+}
+
+
+/* Problem / role blocks */
+.two-column-text {
+  margin-top: 26px;
+  gap: 38px;
+}
+
+
+/* Development steps */
+.process-grid {
+  margin-top: 25px;
+}
+
+.process-step {
+  padding: 19px;
+}
+
+
+/* Concept → hardware sections */
+.evolution-block {
+  margin-top: 32px;
+  padding-top: 28px;
+}
+
+.evolution-heading {
+  margin-bottom: 18px;
+}
+
+
+/* Slightly smaller image boxes */
+.comparison-media {
+  height: 330px !important;
+  min-height: 330px !important;
+  max-height: 330px !important;
+}
+
+
+/* Operating burner video */
+.operating-video-card {
+  margin-top: 20px;
+}
+
+.operating-video-frame {
+  height: 450px;
+}
+
+
+/* Engineering decision rows */
+.decision-list {
+  margin-top: 24px;
+}
+
+.decision-row {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+
+/* Experimental-method list */
+.project-list {
+  margin-top: 18px;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+}
+
+
+/* Results box */
+.outcome-panel {
+  margin-top: 22px;
+  padding: 25px 28px;
+}
+
+
+/* Engineering scope cards */
+.takeaway-grid {
+  margin-top: 22px;
+}
+
+.takeaway {
+  padding: 20px;
+}
+
+
+/* Tool tags */
+.tags {
+  margin-top: 17px;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+  .video-project-hero {
+    min-height: 420px;
+  }
+
+  .video-project-hero__content {
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .project-page {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  .project-facts {
+    margin-bottom: 45px;
+  }
+
+  .project-section {
+    margin-top: 48px;
+  }
+
+  .comparison-media {
+    height: 290px !important;
+    min-height: 290px !important;
+    max-height: 290px !important;
+  }
+
+  .operating-video-frame {
+    height: 310px;
+  }
+}
