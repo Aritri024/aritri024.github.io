@@ -21,14 +21,9 @@
   <link rel="stylesheet" href="styles.css">
 
 
-  <!--
-    Homepage-specific layout.
-
-    This gives us three project cards on larger screens
-    without changing the styling of the individual case-study pages.
-  -->
-
   <style>
+
+    /* Three selected projects on larger screens */
 
     @media (min-width: 1000px) {
 
@@ -76,6 +71,43 @@
         grid-template-columns: 1fr;
       }
 
+    }
+
+
+    /* Professional service */
+
+    .service-block {
+      margin-top: 32px;
+      padding-top: 26px;
+      border-top: 1px solid var(--border);
+    }
+
+
+    .service-block h3 {
+      margin: 0 0 14px;
+      color: var(--text);
+      font-size: 1.05rem;
+    }
+
+
+    .service-item {
+      padding: 18px 20px;
+      background: #f7f9fb;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 5px 5px 0;
+    }
+
+
+    .service-item strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+
+    .service-item span {
+      color: var(--body-text);
+      line-height: 1.6;
     }
 
   </style>
@@ -199,7 +231,7 @@
 
         <a
           class="btn secondary"
-          href="Aritri_Halder_CV.pdf"
+          href="Aritri_Halder_CV_Job.pdf"
           download>
           Download CV
         </a>
@@ -302,7 +334,7 @@
 
 
       <!-- ===================================================
-           PROJECT 1 — 20 kW SYSTEM
+           PROJECT 1
       ==================================================== -->
 
       <article class="card">
@@ -352,25 +384,11 @@
 
           <div class="tags">
 
-            <span class="tag">
-              SolidWorks
-            </span>
-
-            <span class="tag">
-              GD&amp;T
-            </span>
-
-            <span class="tag">
-              DFM/DFA
-            </span>
-
-            <span class="tag">
-              LabVIEW
-            </span>
-
-            <span class="tag">
-              PIV
-            </span>
+            <span class="tag">SolidWorks</span>
+            <span class="tag">GD&amp;T</span>
+            <span class="tag">DFM/DFA</span>
+            <span class="tag">LabVIEW</span>
+            <span class="tag">PIV</span>
 
           </div>
 
@@ -388,7 +406,7 @@
 
 
       <!-- ===================================================
-           PROJECT 2 — OPTICAL DIAGNOSTICS
+           PROJECT 2
       ==================================================== -->
 
       <article class="card">
@@ -438,25 +456,11 @@
 
           <div class="tags">
 
-            <span class="tag">
-              PIV
-            </span>
-
-            <span class="tag">
-              CTC
-            </span>
-
-            <span class="tag">
-              Laser Diagnostics
-            </span>
-
-            <span class="tag">
-              Python
-            </span>
-
-            <span class="tag">
-              MATLAB
-            </span>
+            <span class="tag">PIV</span>
+            <span class="tag">CTC</span>
+            <span class="tag">Laser Diagnostics</span>
+            <span class="tag">Python</span>
+            <span class="tag">MATLAB</span>
 
           </div>
 
@@ -474,7 +478,7 @@
 
 
       <!-- ===================================================
-           PROJECT 3 — MINICHANNEL CFD
+           PROJECT 3
       ==================================================== -->
 
       <article class="card">
@@ -521,21 +525,10 @@
 
           <div class="tags">
 
-            <span class="tag">
-              ANSYS Fluent
-            </span>
-
-            <span class="tag">
-              CFD
-            </span>
-
-            <span class="tag">
-              Mesh Convergence
-            </span>
-
-            <span class="tag">
-              Heat Transfer
-            </span>
+            <span class="tag">ANSYS Fluent</span>
+            <span class="tag">CFD</span>
+            <span class="tag">Mesh Convergence</span>
+            <span class="tag">Heat Transfer</span>
 
           </div>
 
@@ -600,7 +593,7 @@
       <div class="timeline-item">
 
         <div class="timeline-date">
-          Oct 2023 - Present
+          Oct 2024 - Present
         </div>
 
 
@@ -628,7 +621,7 @@
 
 
 
-      <!-- Jadavpur FSI work remains here -->
+      <!-- Jadavpur -->
 
       <div class="timeline-item">
 
@@ -651,8 +644,7 @@
             Executed parallel C/C++ simulations on HPC for unsteady
             fluid-structure interaction at Re = 250. Conducted parametric
             studies across Strouhal number and pitching phase and used
-            Tecplot to analyze wake dynamics, vorticity, and flow separation
-            across controlled operating conditions.
+            Tecplot to analyze wake dynamics, vorticity, and flow separation.
           </p>
 
         </div>
@@ -701,7 +693,7 @@
 
 
 <!-- =========================================================
-     PUBLICATIONS
+     PUBLICATIONS, PRESENTATIONS & SERVICE
 ========================================================= -->
 
 <section id="publications">
@@ -712,18 +704,19 @@
     <div class="section-head">
 
       <div class="section-kicker">
-        Publications
+        Research output
       </div>
 
 
       <div>
 
         <h2 class="section-title">
-          Selected publications and presentations
+          Publications, presentations &amp; professional service
         </h2>
 
         <p class="section-intro">
-          Selected research outputs from combustion and thermal-fluid engineering.
+          Selected scholarly work, conference activity, and professional
+          contributions in combustion and thermal-fluid engineering.
         </p>
 
       </div>
@@ -734,6 +727,8 @@
 
     <div class="pub-list">
 
+
+      <!-- Publication 1 -->
 
       <div class="pub">
 
@@ -756,6 +751,8 @@
       </div>
 
 
+
+      <!-- Publication 2 -->
 
       <div class="pub">
 
@@ -780,6 +777,8 @@
 
 
 
+      <!-- Work in progress -->
+
       <div class="pub">
 
         <div class="pub-title">
@@ -793,6 +792,50 @@
 
       </div>
 
+
+
+      <!-- Presentations -->
+
+      <div class="pub">
+
+        <div class="pub-title">
+          Oral and poster presentations
+        </div>
+
+        <div class="pub-meta">
+          Five presentations at international and U.S. technical meetings,
+          including the 41st International Symposium on Combustion
+          (Kyoto, Japan, 2026), the 14th U.S. National Combustion Meeting
+          (Boston, MA, 2025), and the 4th Symposium on Ammonia Energy (2025).
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- Professional service -->
+
+    <div class="service-block">
+
+      <h3>
+        Professional Service
+      </h3>
+
+
+      <div class="service-item">
+
+        <strong>
+          Peer Reviewer
+        </strong>
+
+        <span>
+          <em>Combustion Science and Technology</em>
+        </span>
+
+      </div>
 
     </div>
 
@@ -1084,7 +1127,7 @@
             Chester E. Dekko Fdn Endowed Graduate Fellowship,
             2024–2025
 
-            <br>
+            <br><br>
 
             Best Abstract - Thermal Applications,
             4th Symposium on Ammonia Energy, 2025
@@ -1095,6 +1138,68 @@
 
       </div>
 
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CV
+========================================================= -->
+
+<section id="cv">
+
+  <div class="container">
+
+
+    <div class="section-head">
+
+      <div class="section-kicker">
+        CV
+      </div>
+
+
+      <div>
+
+        <h2 class="section-title">
+          Curriculum Vitae
+        </h2>
+
+        <p class="section-intro">
+          View my full CV online or download a PDF copy.
+        </p>
+
+
+        <div class="button-row">
+
+          <a
+            class="btn primary"
+            href="cv.html">
+            View CV
+          </a>
+
+          <a
+            class="btn secondary"
+            href="Aritri_Halder_CV_Job.pdf"
+            target="_blank"
+            rel="noopener">
+            Open PDF
+          </a>
+
+          <a
+            class="btn secondary"
+            href="Aritri_Halder_CV_Job.pdf"
+            download>
+            Download CV
+          </a>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -1200,10 +1305,6 @@
 </main>
 
 
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
 <footer class="footer">
 
