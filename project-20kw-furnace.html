@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -17,7 +18,9 @@
   </title>
 
   <link rel="stylesheet" href="styles.css">
+
 </head>
+
 
 
 <body>
@@ -27,28 +30,50 @@
      NAVIGATION
 ========================================================= -->
 
-<nav class="site-nav">
+<header class="site-header">
 
-  <div class="nav-container">
+  <div class="container nav">
 
-    <a href="index.html" class="logo">
+    <a
+      class="brand"
+      href="index.html">
       Aritri Halder
     </a>
 
-    <div class="nav-links">
 
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#publications">Publications</a>
-      <a href="index.html#about">About</a>
-      <a href="cv.html">CV</a>
-      <a href="index.html#contact">Contact</a>
+    <nav
+      class="nav-links"
+      aria-label="Primary navigation">
 
-    </div>
+      <a href="index.html#projects">
+        Projects
+      </a>
+
+      <a href="index.html#experience">
+        Experience
+      </a>
+
+      <a href="index.html#publications">
+        Publications
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="cv.html">
+        CV
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
+    </nav>
 
   </div>
 
-</nav>
+</header>
 
 
 
@@ -113,7 +138,7 @@
 
 
 <!-- =========================================================
-     MAIN PROJECT CONTENT
+     MAIN CONTENT
 ========================================================= -->
 
 <main class="project-page">
@@ -195,18 +220,18 @@
   </h2>
 
   <p>
-    The goal of this work was to create a repeatable experimental platform
+    The goal of this work was to develop a repeatable experimental platform
     for studying high-temperature combustion and thermal-fluid behavior while
-    maintaining enough modularity to change hardware and operating conditions
-    without rebuilding the entire test system.
+    maintaining enough modularity to change burner hardware and operating
+    conditions without rebuilding the complete test system.
   </p>
 
   <p>
-    My role extended beyond operating the experiment. I developed mechanical
-    hardware in SolidWorks, translated concepts into manufacturable components,
-    integrated process-gas delivery and instrumentation, commissioned the test
-    system, developed automated controls, and used experimental measurements
-    to evaluate the resulting hardware.
+    My role extended beyond running experiments. I developed mechanical
+    hardware in SolidWorks, translated design concepts into manufacturable
+    components, integrated process-gas delivery and instrumentation,
+    commissioned the test platform, developed automated controls, and used
+    experimental measurements to evaluate the resulting hardware.
   </p>
 
 
@@ -221,14 +246,14 @@
 
       <p>
         The platform needed to support controlled high-temperature operation,
-        optical access for diagnostic measurements, interchangeable hardware,
-        multiple process-gas streams, and repeatable test conditions.
+        optical diagnostic access, interchangeable hardware, multiple process
+        gas streams, and repeatable experimental conditions.
       </p>
 
       <p>
-        Mechanical geometry, material compatibility, component interfaces,
-        instrumentation, gas delivery, controls, and test repeatability
-        therefore had to be treated as parts of one integrated system.
+        Mechanical geometry, component interfaces, material selection,
+        instrumentation, controls, flow delivery, and test repeatability
+        therefore had to be treated as one integrated engineering system.
       </p>
 
     </div>
@@ -249,9 +274,9 @@
       </p>
 
       <p>
-        This allowed hardware decisions to be evaluated directly through
-        physical testing rather than treating design and experimentation as
-        separate activities.
+        This allowed design decisions to be evaluated directly through
+        physical testing rather than treating hardware development and
+        experimentation as separate activities.
       </p>
 
     </div>
@@ -279,9 +304,9 @@
 
   <p>
     I approached the project as an iterative hardware-development process:
-    establish the required function and geometry, convert the concept into
-    manufacturable parts, integrate the supporting systems, and validate the
-    final hardware experimentally.
+    define the required function and geometry, convert the concept into
+    manufacturable components, integrate the supporting subsystems, and
+    validate the finished hardware experimentally.
   </p>
 
 
@@ -320,7 +345,7 @@
 
       <p>
         Applied GD&amp;T, tolerance stack-up, fit and clearance analysis,
-        DFM/DFA, material selection, engineering drawings, and BOM
+        DFM/DFA, materials selection, engineering drawings, and BOM
         development.
       </p>
 
@@ -339,7 +364,7 @@
       </h3>
 
       <p>
-        Integrated fabricated hardware with process-gas delivery, sensors,
+        Integrated fabricated hardware with gas delivery, sensors,
         NI cDAQ, LabVIEW controls, and optical diagnostic equipment.
       </p>
 
@@ -360,7 +385,7 @@
       <p>
         Executed structured experiments and used diagnostic measurements,
         statistical analysis, and engineering troubleshooting to evaluate
-        performance.
+        system performance.
       </p>
 
     </div>
@@ -389,8 +414,9 @@
   </h2>
 
   <p>
-    These comparisons show how the initial design concepts progressed into
-    manufactured components and assembled experimental hardware.
+    The comparisons below show how the initial design concepts progressed
+    into manufactured components, assembled experimental hardware, and
+    ultimately an operating combustion system.
   </p>
 
 
@@ -408,12 +434,16 @@
       </h3>
 
       <p>
-        System-level burner concept translated into the assembled,
-        optically accessible experimental platform.
+        System-level burner concept translated into manufactured hardware
+        and subsequently operated as an optically accessible experimental
+        combustion platform.
       </p>
 
     </div>
 
+
+
+    <!-- Concept + Built Hardware -->
 
     <div class="comparison-grid">
 
@@ -475,8 +505,9 @@
           </h4>
 
           <p>
-            Manufactured and assembled burner with the quartz optical section
-            installed for experimental operation and optical diagnostic access.
+            Manufactured and assembled burner with the quartz optical
+            section installed for experimental operation and optical
+            diagnostic access.
           </p>
 
         </figcaption>
@@ -485,6 +516,58 @@
 
 
     </div>
+
+
+
+    <!-- =====================================================
+         OPERATING BURNER VIDEO
+    ====================================================== -->
+
+    <figure class="operating-video-card">
+
+      <div class="operating-video-frame">
+
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata"
+          poster="Jet-swirl%20burner%20with%20Quartz%20tube.jpeg">
+
+          <source
+            src="burner-emission.mp4"
+            type="video/mp4">
+
+          Your browser does not support HTML5 video.
+
+        </video>
+
+      </div>
+
+
+      <figcaption class="operating-video-caption">
+
+        <span class="comparison-type">
+          Experimental Operation
+        </span>
+
+        <h4>
+          Burner Operating Under Reacting Conditions
+        </h4>
+
+        <p>
+          The completed jet-swirl burner operating with the quartz optical
+          section installed. The transparent combustion chamber provides
+          direct visual access to the flame during experimental testing and
+          supports simultaneous optical diagnostic measurements.
+        </p>
+
+      </figcaption>
+
+    </figure>
+
 
   </div>
 
@@ -570,9 +653,9 @@
           </h4>
 
           <p>
-            Fabricated swirler produced for integration into the experimental
-            burner, allowing the design geometry to be evaluated as part of
-            the complete test platform.
+            Fabricated swirler produced for integration into the
+            experimental burner, allowing the design geometry to be
+            evaluated as part of the complete test platform.
           </p>
 
         </figcaption>
@@ -606,9 +689,9 @@
     The mechanical design had to balance experimental flexibility,
     manufacturability, high-temperature operation, optical access, and
     reliable assembly. I therefore incorporated tolerance definition,
-    fabrication constraints, interfaces, and material compatibility during
-    the design process rather than addressing them only after the geometry
-    was complete.
+    fabrication constraints, component interfaces, and material compatibility
+    during the design process rather than addressing them only after the
+    geometry was complete.
   </p>
 
 
@@ -624,7 +707,7 @@
       <div class="decision-description">
         Developed SolidWorks models for the burner and modular test hardware
         to evaluate geometry, component interfaces, packaging, and system
-        configuration before fabrication.
+        configuration prior to fabrication.
       </div>
 
     </div>
@@ -654,8 +737,8 @@
       </div>
 
       <div class="decision-description">
-        Used DFM/DFA principles, engineering drawings, and BOM development to
-        convert experimental concepts into parts that could be machined,
+        Used DFM/DFA principles, manufacturing drawings, and BOM development
+        to convert experimental concepts into parts that could be machined,
         assembled, serviced, and modified.
       </div>
 
@@ -670,9 +753,9 @@
       </div>
 
       <div class="decision-description">
-        Selected materials compatible with the high-temperature experimental
-        environment and ammonia process hardware, including components
-        intended for operation near 1000°C.
+        Selected materials suitable for the high-temperature experimental
+        environment and ammonia-compatible process hardware, including
+        prototype components intended for operation near 1000°C.
       </div>
 
     </div>
@@ -714,24 +797,23 @@
   </h2>
 
   <p>
-    After the mechanical system was assembled, the project became a
+    Once the mechanical platform was assembled, the project became a
     multi-subsystem integration problem. I commissioned an
     ammonia/methane/air delivery system using mass flow controllers and
-    integrated pressure and temperature measurements with NI cDAQ hardware.
+    integrated pressure and temperature sensing with NI cDAQ hardware.
   </p>
 
   <p>
-    LabVIEW was used for flow-controller setpoint control and automated data
-    logging, supporting synchronized and repeatable experiments. The resulting
+    LabVIEW was used for mass-flow-controller setpoints and automated data
+    logging, supporting synchronized and repeatable experiments. The complete
     setup connected physical hardware, process control, instrumentation, and
-    data acquisition within one test architecture.
+    data acquisition within one experimental architecture.
   </p>
 
   <p>
-    During commissioning and experimental campaigns, I applied root-cause
-    analysis and FMEA principles to isolate failures associated with
-    mechanical hardware, flow delivery, controls, instrumentation, and
-    diagnostic equipment.
+    During commissioning and test campaigns, I applied root-cause analysis
+    and FMEA principles to isolate issues associated with mechanical hardware,
+    flow delivery, controls, instrumentation, and diagnostic equipment.
   </p>
 
 </section>
@@ -753,41 +835,46 @@
   </h2>
 
   <p>
-    The completed system was used for structured testing across multiple
-    operating variables rather than a single demonstration point. I planned
-    a four-variable Design of Experiments and combined system measurements
-    with optical and emissions diagnostics.
+    The completed platform was used for structured testing across multiple
+    operating variables rather than a single demonstration condition.
+    I planned a four-variable Design of Experiments and combined system
+    measurements with several optical and emissions-diagnostic techniques.
   </p>
 
 
   <ul class="project-list">
 
+
     <li>
       <strong>FTIR spectroscopy:</strong>
-      evaluated gaseous emissions including NOx and ammonia.
+      measured gaseous emissions including NOx and ammonia.
     </li>
+
 
     <li>
       <strong>Particle Image Velocimetry:</strong>
-      characterized velocity fields and flow behavior within the experimental
-      system.
+      characterized velocity fields, flow structure, and recirculation.
     </li>
+
 
     <li>
       <strong>Chemiluminescence imaging:</strong>
       provided optical measurements of flame and reaction-zone behavior.
     </li>
 
+
     <li>
-      <strong>Computed tomography:</strong>
-      extended the optical diagnostics to three-dimensional reconstruction.
+      <strong>Computed Tomography of Chemiluminescence:</strong>
+      extended optical measurements to three-dimensional flame reconstruction.
     </li>
+
 
     <li>
       <strong>Design of Experiments:</strong>
       provided a structured framework for comparing operating conditions and
-      defining system behavior.
+      identifying system sensitivity.
     </li>
+
 
   </ul>
 
@@ -796,7 +883,7 @@
 
 
 <!-- =========================================================
-     DATA & ANALYSIS
+     DATA ANALYSIS
 ========================================================= -->
 
 <section class="project-section">
@@ -819,12 +906,12 @@
   <p>
     Typical optical datasets contained approximately 200–300 images per test
     condition. Automating the workflow enabled repeated operating conditions
-    to be processed consistently and made quantitative comparisons more
-    practical.
+    to be processed consistently and made quantitative comparison across the
+    experimental matrix practical.
   </p>
 
   <p>
-    The objective was not simply to generate plots, but to use experimental
+    The objective was not simply to generate figures, but to use experimental
     measurements to evaluate hardware performance, identify system behavior,
     and support engineering decisions.
   </p>
@@ -897,7 +984,7 @@
 
       <p>
         Progression from CAD concepts through detailed mechanical definition,
-        fabrication, assembly, and working experimental hardware.
+        fabrication, assembly, and operating experimental hardware.
       </p>
 
     </div>
@@ -911,8 +998,8 @@
       </h3>
 
       <p>
-        Integration of mechanical hardware, gas delivery, sensors, automated
-        controls, diagnostics, and synchronized data acquisition.
+        Integration of mechanical hardware, process-gas delivery, sensors,
+        automated controls, diagnostics, and synchronized data acquisition.
       </p>
 
     </div>
@@ -958,22 +1045,39 @@
   <div class="tags">
 
     <span class="tag">SolidWorks</span>
+
     <span class="tag">GD&amp;T</span>
+
     <span class="tag">DFM/DFA</span>
+
     <span class="tag">Tolerance Analysis</span>
+
     <span class="tag">BOM Development</span>
+
     <span class="tag">Materials Selection</span>
+
     <span class="tag">DOE</span>
+
     <span class="tag">LabVIEW</span>
+
     <span class="tag">NI cDAQ</span>
+
     <span class="tag">Mass Flow Controllers</span>
+
     <span class="tag">FTIR</span>
+
     <span class="tag">PIV</span>
+
     <span class="tag">Chemiluminescence</span>
+
     <span class="tag">Computed Tomography</span>
+
     <span class="tag">Python</span>
+
     <span class="tag">MATLAB</span>
+
     <span class="tag">RCA</span>
+
     <span class="tag">FMEA</span>
 
   </div>
@@ -1014,14 +1118,15 @@
      FOOTER
 ========================================================= -->
 
-<footer class="site-footer">
+<footer class="footer">
 
-  <div class="footer-inner">
-    © 2026 Aritri Halder. Built with ChatGPT.
+  <div class="container">
+    © 2026 Aritri Halder · Mechanical Engineering Portfolio
   </div>
 
 </footer>
 
 
 </body>
+
 </html>
