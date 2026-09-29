@@ -1,68 +1,1427 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>20 kW High-Temperature Furnace | Aritri Halder</title>
-<style>
-:root{--text:#18212b;--muted:#617080;--accent:#1f5682;--border:#dfe4e8;--soft:#f6f8fa;}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-nav{border-bottom:1px solid var(--border);background:#fff}
-.nav-container{max-width:1120px;margin:0 auto;padding:18px 28px;display:flex;justify-content:space-between;align-items:center;gap:28px}
-.logo{font-weight:700;text-decoration:none;color:var(--text)}
-.nav-links{display:flex;gap:24px;flex-wrap:wrap}
-.nav-links a{color:#2f3b47;text-decoration:none;font-size:.95rem}
-.project-page{max-width:1120px;margin:0 auto;padding:64px 28px 96px}
-.project-header{max-width:900px;margin-bottom:60px}
-.project-label{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
-h1{font-size:clamp(2.5rem,5vw,4rem);line-height:1.06;margin:0 0 18px;letter-spacing:-.02em}
-.project-intro{font-size:1.12rem;color:var(--muted);max-width:830px;margin:0}
-.back-link{display:inline-block;margin-top:24px;color:var(--accent);text-decoration:none}
-.project-section{margin-top:64px}
-.project-section h2{font-size:1.85rem;margin:0 0 12px}
-.project-section>p{max-width:860px;color:var(--muted);margin:0}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* Strongly scoped comparison layout so global site CSS cannot blow images up */
-#concept-hardware .comparison-set{margin-top:38px;padding-top:34px;border-top:1px solid var(--border)}
-#concept-hardware .comparison-set:first-of-type{margin-top:32px}
-#concept-hardware .comparison-head{margin-bottom:18px}
-#concept-hardware .comparison-head h3{font-size:1.28rem;margin:0 0 6px}
-#concept-hardware .comparison-head p{margin:0;color:var(--muted)}
-#concept-hardware .comparison-grid{display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:24px !important;align-items:stretch !important;width:100% !important;overflow:visible !important}
-#concept-hardware figure.comparison-card{margin:0 !important;min-width:0 !important;width:auto !important;max-width:none !important;display:flex !important;flex-direction:column !important;border:1px solid var(--border) !important;border-radius:8px !important;overflow:hidden !important;background:#fff !important}
-#concept-hardware .comparison-media{height:360px !important;min-height:360px !important;max-height:360px !important;width:100% !important;display:flex !important;align-items:center !important;justify-content:center !important;padding:20px !important;background:var(--soft) !important;overflow:hidden !important;border-bottom:1px solid var(--border) !important}
-#concept-hardware .comparison-media img{display:block !important;width:auto !important;height:auto !important;max-width:100% !important;max-height:100% !important;min-width:0 !important;object-fit:contain !important;object-position:center !important;margin:0 auto !important}
-#concept-hardware .comparison-caption{padding:18px 20px 20px !important}
-#concept-hardware .comparison-kicker{display:block;color:var(--accent);font-size:.72rem;font-weight:700;letter-spacing:.10em;text-transform:uppercase;margin-bottom:6px}
-#concept-hardware .comparison-caption h4{font-size:1.02rem;margin:0 0 6px}
-#concept-hardware .comparison-caption p{font-size:.94rem;color:var(--muted);margin:0;line-height:1.55}
+  <title>20 kW High-Temperature Furnace | Aritri Halder</title>
 
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tag{border:1px solid var(--border);border-radius:5px;background:#f7f9fb;padding:5px 9px;font-size:.8rem;color:#52606e}
-footer{border-top:1px solid var(--border);padding:30px;text-align:center;color:#7a8794;font-size:.85rem}
-@media(max-width:760px){.nav-container{align-items:flex-start;flex-direction:column}.nav-links{gap:14px}.project-page{padding:44px 20px 72px}#concept-hardware .comparison-grid{grid-template-columns:1fr !important}#concept-hardware .comparison-media{height:320px !important;min-height:320px !important;max-height:320px !important}}
-</style>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+
+    /* =========================================================
+       PROJECT PAGE LAYOUT
+    ========================================================= */
+
+    .project-page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 70px 28px 110px;
+    }
+
+    .project-header {
+      max-width: 960px;
+      margin-bottom: 55px;
+    }
+
+    .project-label,
+    .section-eyebrow {
+      color: #1f5682;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .project-label {
+      margin-bottom: 18px;
+    }
+
+    .project-header h1 {
+      margin: 0 0 22px;
+      max-width: 950px;
+
+      color: #18212b;
+      font-size: clamp(2.6rem, 5vw, 4.35rem);
+      line-height: 1.05;
+      letter-spacing: -0.025em;
+    }
+
+    .project-intro {
+      max-width: 900px;
+      margin: 0;
+
+      color: #607083;
+      font-size: 1.12rem;
+      line-height: 1.75;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 27px;
+
+      color: #1f5682;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================================================
+       QUICK PROJECT FACTS
+    ========================================================= */
+
+    .project-facts {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+
+      margin-top: 38px;
+
+      border-top: 1px solid #dfe4e8;
+      border-bottom: 1px solid #dfe4e8;
+    }
+
+    .project-fact {
+      padding: 22px 22px 22px 0;
+    }
+
+    .project-fact + .project-fact {
+      padding-left: 22px;
+      border-left: 1px solid #dfe4e8;
+    }
+
+    .project-fact-label {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: #738091;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-fact-value {
+      color: #1b2530;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      font-weight: 600;
+    }
+
+
+    /* =========================================================
+       GENERAL SECTIONS
+    ========================================================= */
+
+    .project-section {
+      margin-top: 78px;
+    }
+
+    .project-section h2 {
+      margin: 0 0 17px;
+
+      color: #18212b;
+      font-size: 1.9rem;
+      line-height: 1.25;
+    }
+
+    .project-section h3 {
+      color: #18212b;
+    }
+
+    .project-section p {
+      max-width: 900px;
+
+      margin: 0 0 18px;
+
+      color: #5d6d80;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .project-section ul {
+      max-width: 900px;
+
+      margin: 22px 0 0;
+      padding-left: 22px;
+
+      color: #5d6d80;
+    }
+
+    .project-section li {
+      margin-bottom: 12px;
+      padding-left: 5px;
+      line-height: 1.7;
+    }
+
+    .project-section strong {
+      color: #1d2834;
+    }
+
+
+    /* =========================================================
+       PROBLEM / ROLE
+    ========================================================= */
+
+    .two-column-text {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 48px;
+
+      margin-top: 30px;
+    }
+
+    .text-panel {
+      padding-top: 22px;
+      border-top: 2px solid #1f5682;
+    }
+
+    .text-panel h3 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+    }
+
+    .text-panel p {
+      font-size: 0.98rem;
+    }
+
+
+    /* =========================================================
+       DEVELOPMENT PROCESS
+    ========================================================= */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
+
+      margin-top: 32px;
+    }
+
+    .process-step {
+      padding: 22px;
+
+      border: 1px solid #dce2e7;
+      border-radius: 7px;
+      background: #ffffff;
+    }
+
+    .process-number {
+      display: block;
+
+      margin-bottom: 15px;
+
+      color: #1f5682;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+    }
+
+    .process-step h3 {
+      margin: 0 0 9px;
+
+      font-size: 1rem;
+    }
+
+    .process-step p {
+      margin: 0;
+
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       CONCEPT → HARDWARE
+    ========================================================= */
+
+    .evolution-block {
+      margin-top: 45px;
+      padding-top: 38px;
+
+      border-top: 1px solid #dfe4e8;
+    }
+
+    .evolution-heading {
+      margin-bottom: 24px;
+    }
+
+    .evolution-heading h3 {
+      margin: 0 0 7px;
+
+      font-size: 1.28rem;
+    }
+
+    .evolution-heading p {
+      margin: 0;
+    }
+
+    .comparison-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 24px !important;
+    }
+
+    .comparison-card {
+      margin: 0;
+
+      overflow: hidden;
+
+      border: 1px solid #dce2e7;
+      border-radius: 8px;
+      background: white;
+    }
+
+    .comparison-media {
+      height: 360px !important;
+      min-height: 360px !important;
+      max-height: 360px !important;
+
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+
+      overflow: hidden !important;
+
+      padding: 20px !important;
+
+      background: #f7f8fa;
+      border-bottom: 1px solid #dce2e7;
+    }
+
+    .comparison-media img {
+      width: auto !important;
+      height: auto !important;
+
+      max-width: 100% !important;
+      max-height: 100% !important;
+
+      object-fit: contain !important;
+      object-position: center !important;
+
+      display: block !important;
+    }
+
+    .comparison-caption {
+      padding: 19px 20px 21px;
+    }
+
+    .comparison-type {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #1f5682;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .comparison-caption h4 {
+      margin: 0 0 7px;
+
+      color: #18212b;
+      font-size: 1.02rem;
+    }
+
+    .comparison-caption p {
+      margin: 0;
+
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+
+    /* =========================================================
+       ENGINEERING DECISIONS
+    ========================================================= */
+
+    .decision-list {
+      margin-top: 30px;
+    }
+
+    .decision-row {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 30px;
+
+      padding: 22px 0;
+
+      border-top: 1px solid #dfe4e8;
+    }
+
+    .decision-row:last-child {
+      border-bottom: 1px solid #dfe4e8;
+    }
+
+    .decision-title {
+      color: #1d2834;
+      font-weight: 700;
+    }
+
+    .decision-description {
+      color: #5d6d80;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       OUTCOME / IMPACT
+    ========================================================= */
+
+    .outcome-panel {
+      margin-top: 30px;
+      padding: 30px 32px;
+
+      border-left: 4px solid #1f5682;
+      background: #f7f9fb;
+    }
+
+    .outcome-number {
+      display: block;
+
+      margin-bottom: 4px;
+
+      color: #1f5682;
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    .outcome-panel p {
+      margin: 0;
+
+      color: #435263;
+    }
+
+
+    /* =========================================================
+       TAKEAWAYS
+    ========================================================= */
+
+    .takeaway-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+
+      margin-top: 28px;
+    }
+
+    .takeaway {
+      padding: 23px;
+
+      border: 1px solid #dce2e7;
+      border-radius: 7px;
+    }
+
+    .takeaway h3 {
+      margin: 0 0 9px;
+
+      font-size: 1rem;
+    }
+
+    .takeaway p {
+      margin: 0;
+
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .project-facts {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-fact + .project-fact {
+        border-left: none;
+      }
+
+      .project-fact:nth-child(even) {
+        padding-left: 20px;
+        border-left: 1px solid #dfe4e8;
+      }
+
+      .project-fact:nth-child(n+3) {
+        border-top: 1px solid #dfe4e8;
+      }
+
+      .process-grid,
+      .takeaway-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .project-page {
+        padding: 45px 20px 80px;
+      }
+
+      .two-column-text,
+      .comparison-grid,
+      .process-grid,
+      .takeaway-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .comparison-media {
+        height: 320px !important;
+        min-height: 320px !important;
+        max-height: 320px !important;
+      }
+
+      .decision-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+    }
+
+  </style>
 </head>
+
+
+
 <body>
-<nav><div class="nav-container"><a class="logo" href="index.html">Aritri Halder</a><div class="nav-links"><a href="index.html#projects">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#publications">Publications</a><a href="index.html#about">About</a><a href="cv.html">CV</a><a href="index.html#contact">Contact</a></div></div></nav>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+  <div class="nav-container">
+
+    <a href="index.html" class="logo">
+      Aritri Halder
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#publications">Publications</a>
+      <a href="index.html#about">About</a>
+      <a href="cv.html">CV</a>
+      <a href="index.html#contact">Contact</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
 <main class="project-page">
-<header class="project-header"><div class="project-label">Project</div><h1>20 kW High-Temperature Furnace &amp; Test Platform</h1><p class="project-intro">Mechanical design, instrumentation, automated control, experimental diagnostics, and performance validation.</p><a class="back-link" href="index.html#projects">← Back to selected projects</a></header>
-<section class="project-section"><h2>Overview</h2><p>Designed and validated a 20 kW experimental furnace and modular test hardware for controlled thermal-fluid testing and engineering evaluation.</p></section>
-<section class="project-section" id="concept-hardware"><h2>From Concept to Hardware</h2><p>The comparisons below show the design progression from concept geometry to manufactured and assembled hardware.</p>
-<div class="comparison-set"><div class="comparison-head"><h3>Jet-Swirl Burner System</h3><p>System-level concept translated into the assembled optically accessible burner hardware.</p></div><div class="comparison-grid">
-<figure class="comparison-card"><div class="comparison-media"><img src="Concept_JSB.png" alt="Jet-swirl burner concept model"></div><figcaption class="comparison-caption"><span class="comparison-kicker">Concept</span><h4>Jet-Swirl Burner Design</h4><p>System-level concept model used to define the burner architecture before fabrication and assembly.</p></figcaption></figure>
-<figure class="comparison-card"><div class="comparison-media"><img src="Jet-swirl%20burner%20with%20Quartz%20tube.jpeg" alt="Assembled jet-swirl burner with quartz tube"></div><figcaption class="comparison-caption"><span class="comparison-kicker">Built hardware</span><h4>Assembled Experimental Burner</h4><p>Manufactured and assembled burner with the quartz optical section installed for experimental access.</p></figcaption></figure>
-</div></div>
-<div class="comparison-set"><div class="comparison-head"><h3>Radial Swirler</h3><p>Engineering geometry translated into the machined component used in the burner assembly.</p></div><div class="comparison-grid">
-<figure class="comparison-card"><div class="comparison-media"><img src="Concept_Swirler.png" alt="Radial swirler engineering concept"></div><figcaption class="comparison-caption"><span class="comparison-kicker">Concept</span><h4>Swirler Geometry</h4><p>Engineering definition of the radial vane arrangement and key geometric parameters.</p></figcaption></figure>
-<figure class="comparison-card"><div class="comparison-media"><img src="Machined_Swirler.jpg" alt="Machined radial swirler"></div><figcaption class="comparison-caption"><span class="comparison-kicker">Manufactured component</span><h4>Machined Swirler</h4><p>Fabricated swirler component produced for integration into the experimental burner hardware.</p></figcaption></figure>
-</div></div>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="project-header">
+
+  <div class="project-label">
+    Project
+  </div>
+
+  <h1>
+    20 kW High-Temperature Furnace &amp; Test Platform
+  </h1>
+
+  <p class="project-intro">
+    Development of a modular high-temperature experimental platform
+    combining mechanical design, prototype fabrication, gas-delivery
+    hardware, instrumentation, automated controls, optical diagnostics,
+    and experimental validation.
+  </p>
+
+  <a href="index.html#projects" class="back-link">
+    ← Back to selected projects
+  </a>
+
+
+  <!-- Quick facts -->
+
+  <div class="project-facts">
+
+    <div class="project-fact">
+
+      <span class="project-fact-label">
+        Scale
+      </span>
+
+      <span class="project-fact-value">
+        20 kW experimental system
+      </span>
+
+    </div>
+
+
+    <div class="project-fact">
+
+      <span class="project-fact-label">
+        My Focus
+      </span>
+
+      <span class="project-fact-value">
+        Mechanical design, integration &amp; validation
+      </span>
+
+    </div>
+
+
+    <div class="project-fact">
+
+      <span class="project-fact-label">
+        Environment
+      </span>
+
+      <span class="project-fact-value">
+        High-temperature thermal-fluid R&amp;D
+      </span>
+
+    </div>
+
+
+    <div class="project-fact">
+
+      <span class="project-fact-label">
+        Collaboration
+      </span>
+
+      <span class="project-fact-value">
+        CenterPoint Energy &amp; U of M Duluth
+      </span>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     OVERVIEW
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Overview
+  </div>
+
+  <h2>
+    Building the experimental system from concept through validation
+  </h2>
+
+  <p>
+    The objective of this work was to create a repeatable experimental
+    platform for studying high-temperature combustion and thermal-fluid
+    behavior while retaining enough modularity to change hardware and
+    operating conditions without rebuilding the complete system.
+  </p>
+
+  <p>
+    My work extended beyond operating the experiment. I developed the
+    mechanical hardware in SolidWorks, converted design concepts into
+    manufacturing-ready components, integrated gas-delivery and
+    instrumentation hardware, commissioned the test platform, and used
+    experimental measurements to evaluate the resulting system.
+  </p>
+
+
+  <div class="two-column-text">
+
+    <div class="text-panel">
+
+      <h3>
+        Engineering problem
+      </h3>
+
+      <p>
+        The test platform needed to support controlled high-temperature
+        operation while providing optical access for diagnostics and
+        accommodating interchangeable burner hardware. Mechanical geometry,
+        material selection, alignment, gas delivery, instrumentation, and
+        experimental repeatability therefore had to be considered as one
+        integrated system.
+      </p>
+
+    </div>
+
+
+    <div class="text-panel">
+
+      <h3>
+        My role
+      </h3>
+
+      <p>
+        I worked across mechanical design, component definition, prototype
+        assembly, instrumentation, process controls, experimental planning,
+        troubleshooting, diagnostic integration, and data analysis. This
+        allowed design decisions to be evaluated directly through hardware
+        testing rather than treating design and experimentation as separate
+        activities.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
-<section class="project-section"><h2>Engineering Approach</h2><p>SolidWorks models, engineering drawings, GD&amp;T, tolerance stack-ups, DFM/DFA, fit and clearance analysis, BOM development, and high-temperature materials selection were used to translate the experimental concept into manufacturable hardware.</p></section>
-<section class="project-section"><h2>Instrumentation &amp; Test Integration</h2><p>The experimental platform integrated ammonia, methane, and air delivery with mass flow controllers, pressure and temperature sensing, NI cDAQ hardware, and LabVIEW for automated control and synchronized data acquisition.</p></section>
-<section class="project-section"><h2>Experimental Methods</h2><p>A four-variable Design of Experiments was combined with FTIR, Particle Image Velocimetry, chemiluminescence imaging, and computed-tomography measurements to characterize operating conditions and system performance.</p></section>
-<section class="project-section"><h2>Results</h2><p>Testing produced repeatable process data and engineering recommendations in collaboration with CenterPoint Energy and the University of Minnesota Duluth. The work reported a 60% reduction in NOx compared with conventional burners.</p></section>
-<section class="project-section"><h2>Tools &amp; Methods</h2><div class="tags"><span class="tag">SolidWorks</span><span class="tag">GD&amp;T</span><span class="tag">DFM/DFA</span><span class="tag">Tolerance Analysis</span><span class="tag">DOE</span><span class="tag">LabVIEW</span><span class="tag">NI cDAQ</span><span class="tag">FTIR</span><span class="tag">PIV</span><span class="tag">Python</span><span class="tag">MATLAB</span><span class="tag">RCA</span><span class="tag">FMEA</span></div></section>
-<section class="project-section"><h2>Related Work</h2><p>A. Halder, C. Goertemiller, A. Hoxie, and W. F. Northrop, “Experimental investigation of a 20 kW atmospheric pressure pure ammonia jet-swirl burner,” <em>Proceedings of the Combustion Institute</em>, 2026.</p></section>
-</main><footer>© 2026 Aritri Halder</footer>
-</body></html>
+
+
+
+<!-- =========================================================
+     DEVELOPMENT PROCESS
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Development Process
+  </div>
+
+  <h2>
+    From engineering concept to experimental hardware
+  </h2>
+
+  <p>
+    I approached the system as an iterative hardware-development problem:
+    establish the required geometry and functionality, translate the concept
+    into manufacturable components, integrate the subsystems, and use
+    experimental results to evaluate system performance.
+  </p>
+
+
+  <div class="process-grid">
+
+    <div class="process-step">
+
+      <span class="process-number">
+        01
+      </span>
+
+      <h3>
+        Concept Development
+      </h3>
+
+      <p>
+        Developed system and component concepts in SolidWorks to establish
+        the burner architecture, modular hardware, and diagnostic access.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <span class="process-number">
+        02
+      </span>
+
+      <h3>
+        Detailed Engineering
+      </h3>
+
+      <p>
+        Applied GD&amp;T, tolerance stack-ups, fit and clearance analysis,
+        DFM/DFA, material selection, engineering drawings, and BOM development.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <span class="process-number">
+        03
+      </span>
+
+      <h3>
+        Build &amp; Integration
+      </h3>
+
+      <p>
+        Integrated fabricated hardware with gas delivery, sensors,
+        NI cDAQ, LabVIEW controls, and optical diagnostic equipment.
+      </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+      <span class="process-number">
+        04
+      </span>
+
+      <h3>
+        Test &amp; Validate
+      </h3>
+
+      <p>
+        Executed structured experiments and applied diagnostic and
+        data-analysis methods to define operating behavior and evaluate
+        performance.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONCEPT TO HARDWARE
+========================================================= -->
+
+<section class="project-section" id="concept-hardware">
+
+  <div class="section-eyebrow">
+    Mechanical Development
+  </div>
+
+  <h2>
+    From Concept to Hardware
+  </h2>
+
+  <p>
+    The comparisons below show how the initial design concepts were
+    translated into manufactured components and assembled experimental
+    hardware.
+  </p>
+
+
+  <!-- =======================================================
+       JET-SWIRL BURNER
+  ======================================================== -->
+
+  <div class="evolution-block">
+
+    <div class="evolution-heading">
+
+      <h3>
+        Jet-Swirl Burner System
+      </h3>
+
+      <p>
+        System-level concept translated into the assembled,
+        optically accessible burner platform.
+      </p>
+
+    </div>
+
+
+    <div class="comparison-grid">
+
+
+      <!-- Concept -->
+
+      <figure class="comparison-card">
+
+        <div class="comparison-media">
+
+          <img
+            src="Concept_JSB.png"
+            alt="Jet-swirl burner concept model">
+
+        </div>
+
+        <figcaption class="comparison-caption">
+
+          <span class="comparison-type">
+            Concept
+          </span>
+
+          <h4>
+            Jet-Swirl Burner Design
+          </h4>
+
+          <p>
+            System-level model used to establish the burner architecture,
+            overall packaging, optical section, and mechanical interfaces
+            before fabrication and assembly.
+          </p>
+
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- Built system -->
+
+      <figure class="comparison-card">
+
+        <div class="comparison-media">
+
+          <img
+            src="Jet-swirl%20burner%20with%20Quartz%20tube.jpeg"
+            alt="Assembled jet-swirl burner with quartz tube">
+
+        </div>
+
+        <figcaption class="comparison-caption">
+
+          <span class="comparison-type">
+            Built Hardware
+          </span>
+
+          <h4>
+            Assembled Experimental Burner
+          </h4>
+
+          <p>
+            Manufactured and assembled burner with the quartz optical
+            section installed, providing physical access for experimental
+            operation and optical diagnostics.
+          </p>
+
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       SWIRLER
+  ======================================================== -->
+
+  <div class="evolution-block">
+
+    <div class="evolution-heading">
+
+      <h3>
+        Radial Swirler
+      </h3>
+
+      <p>
+        Engineering geometry translated into the machined component
+        incorporated into the final burner hardware.
+      </p>
+
+    </div>
+
+
+    <div class="comparison-grid">
+
+
+      <!-- Swirler concept -->
+
+      <figure class="comparison-card">
+
+        <div class="comparison-media">
+
+          <img
+            src="Concept_Swirler.png"
+            alt="Radial swirler engineering concept">
+
+        </div>
+
+        <figcaption class="comparison-caption">
+
+          <span class="comparison-type">
+            Concept
+          </span>
+
+          <h4>
+            Swirler Geometry
+          </h4>
+
+          <p>
+            Engineering definition of the radial vane arrangement and key
+            geometry used to convert the flow-control concept into a component
+            suitable for detailed mechanical development.
+          </p>
+
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- Manufactured swirler -->
+
+      <figure class="comparison-card">
+
+        <div class="comparison-media">
+
+          <img
+            src="Machined_Swirler.jpg"
+            alt="Machined radial swirler">
+
+        </div>
+
+        <figcaption class="comparison-caption">
+
+          <span class="comparison-type">
+            Manufactured Component
+          </span>
+
+          <h4>
+            Machined Swirler
+          </h4>
+
+          <p>
+            Fabricated swirler component produced for integration into the
+            experimental burner, allowing the design concept to be evaluated
+            as part of the complete test system.
+          </p>
+
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ENGINEERING APPROACH
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Mechanical Engineering
+  </div>
+
+  <h2>
+    How I translated the design into manufacturable hardware
+  </h2>
+
+  <p>
+    The mechanical design had to balance experimental flexibility with
+    practical fabrication and assembly. I therefore treated manufacturability,
+    tolerances, interfaces, material compatibility, and future hardware
+    changes as part of the design process rather than addressing them only
+    after the geometry was complete.
+  </p>
+
+
+  <div class="decision-list">
+
+
+    <div class="decision-row">
+
+      <div class="decision-title">
+        CAD &amp; architecture
+      </div>
+
+      <div class="decision-description">
+        Developed SolidWorks models for the burner and modular test hardware,
+        allowing component geometry and interfaces to be evaluated before
+        physical fabrication.
+      </div>
+
+    </div>
+
+
+    <div class="decision-row">
+
+      <div class="decision-title">
+        Tolerance definition
+      </div>
+
+      <div class="decision-description">
+        Applied GD&amp;T, tolerance stack-up, and fit/clearance analysis to
+        define mechanical relationships between components and support
+        reliable assembly.
+      </div>
+
+    </div>
+
+
+    <div class="decision-row">
+
+      <div class="decision-title">
+        Manufacturability
+      </div>
+
+      <div class="decision-description">
+        Used DFM/DFA principles, engineering drawings, and BOM development
+        to convert experimental concepts into hardware that could be machined,
+        assembled, serviced, and modified.
+      </div>
+
+    </div>
+
+
+    <div class="decision-row">
+
+      <div class="decision-title">
+        Materials
+      </div>
+
+      <div class="decision-description">
+        Selected materials suitable for the high-temperature experimental
+        environment and ammonia-compatible process hardware, with prototype
+        components operating near 1000°C.
+      </div>
+
+    </div>
+
+
+    <div class="decision-row">
+
+      <div class="decision-title">
+        Modularity
+      </div>
+
+      <div class="decision-description">
+        Designed the experimental platform so hardware could be changed and
+        evaluated without requiring a complete rebuild of the test system,
+        supporting iterative experimental development.
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SYSTEM INTEGRATION
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    System Integration
+  </div>
+
+  <h2>
+    Connecting mechanical hardware, gas delivery, sensors, and controls
+  </h2>
+
+  <p>
+    Once the mechanical hardware was assembled, the project became a
+    system-integration problem. I commissioned a multi-stream
+    ammonia/methane/air delivery system using mass flow controllers and
+    integrated temperature and pressure sensing with NI cDAQ hardware.
+  </p>
+
+  <p>
+    LabVIEW was used for flow-controller setpoints and automated data logging,
+    enabling synchronized and repeatable testing. Bringing these systems
+    together required checking flow delivery, sensor behavior, controls,
+    mechanical interfaces, and data acquisition as a complete experimental
+    system rather than troubleshooting each subsystem independently.
+  </p>
+
+  <p>
+    During commissioning and testing, I used root-cause analysis and FMEA
+    principles to isolate hardware, flow-control, instrumentation, and
+    diagnostic issues and restore repeatable operation.
+  </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     EXPERIMENTAL VALIDATION
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Test &amp; Validation
+  </div>
+
+  <h2>
+    Using experiments to evaluate the hardware
+  </h2>
+
+  <p>
+    The completed platform was used for structured experimental testing
+    rather than a single demonstration point. I planned a four-variable
+    Design of Experiments and combined system measurements with several
+    optical and emissions-diagnostic techniques.
+  </p>
+
+
+  <ul>
+
+    <li>
+      <strong>FTIR spectroscopy</strong> was used to evaluate gaseous
+      emissions, including NOx and ammonia.
+    </li>
+
+    <li>
+      <strong>Particle Image Velocimetry (PIV)</strong> was used to
+      characterize flow behavior and provide quantitative velocity-field
+      information.
+    </li>
+
+    <li>
+      <strong>Chemiluminescence imaging</strong> provided optical information
+      on flame and reaction-zone behavior.
+    </li>
+
+    <li>
+      <strong>Computed tomography measurements</strong> extended the optical
+      diagnostics to three-dimensional reconstruction.
+    </li>
+
+    <li>
+      <strong>Python and MATLAB</strong> were used to automate processing,
+      statistical analysis, visualization, and experimental-data workflows.
+    </li>
+
+  </ul>
+
+</section>
+
+
+
+<!-- =========================================================
+     DATA PROCESSING
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Data &amp; Analysis
+  </div>
+
+  <h2>
+    Turning experimental measurements into engineering information
+  </h2>
+
+  <p>
+    The diagnostic systems generated substantially more data than could be
+    processed efficiently by hand. I automated Python and MATLAB workflows
+    for image processing, calibration, statistical analysis, and visualization,
+    with typical optical datasets containing approximately 200–300 images per
+    test condition.
+  </p>
+
+  <p>
+    Automating the workflow made it practical to compare repeated operating
+    conditions and evaluate system behavior using consistent processing
+    methods. The goal was not simply to generate plots, but to convert
+    experimental measurements into information that could be used to assess
+    the hardware and guide engineering decisions.
+  </p>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESULTS
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Outcome
+  </div>
+
+  <h2>
+    Experimental platform and performance validation
+  </h2>
+
+  <p>
+    The completed system produced repeatable process data and supported
+    engineering evaluation in collaboration with CenterPoint Energy and the
+    University of Minnesota Duluth.
+  </p>
+
+
+  <div class="outcome-panel">
+
+    <span class="outcome-number">
+      60%
+    </span>
+
+    <p>
+      Reported reduction in NOx emissions compared with conventional burners
+      while evaluating the experimental burner configuration.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHAT THE PROJECT DEMONSTRATES
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Engineering Scope
+  </div>
+
+  <h2>
+    What this project demonstrates
+  </h2>
+
+
+  <div class="takeaway-grid">
+
+
+    <div class="takeaway">
+
+      <h3>
+        Hardware Development
+      </h3>
+
+      <p>
+        Progression from CAD concepts through detailed mechanical definition,
+        fabrication, assembly, and experimental hardware.
+      </p>
+
+    </div>
+
+
+    <div class="takeaway">
+
+      <h3>
+        System Integration
+      </h3>
+
+      <p>
+        Integration of mechanical hardware, process gas delivery,
+        instrumentation, automated controls, and data acquisition.
+      </p>
+
+    </div>
+
+
+    <div class="takeaway">
+
+      <h3>
+        Test &amp; Validation
+      </h3>
+
+      <p>
+        Structured experimental planning, diagnostic measurements,
+        troubleshooting, analysis, and performance evaluation.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOOLS
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Technical Methods
+  </div>
+
+  <h2>
+    Tools &amp; Methods
+  </h2>
+
+  <div class="tags">
+
+    <span class="tag">SolidWorks</span>
+    <span class="tag">GD&amp;T</span>
+    <span class="tag">DFM/DFA</span>
+    <span class="tag">Tolerance Analysis</span>
+    <span class="tag">BOM Development</span>
+    <span class="tag">Materials Selection</span>
+    <span class="tag">DOE</span>
+    <span class="tag">LabVIEW</span>
+    <span class="tag">NI cDAQ</span>
+    <span class="tag">Mass Flow Controllers</span>
+    <span class="tag">FTIR</span>
+    <span class="tag">PIV</span>
+    <span class="tag">Chemiluminescence</span>
+    <span class="tag">Computed Tomography</span>
+    <span class="tag">Python</span>
+    <span class="tag">MATLAB</span>
+    <span class="tag">RCA</span>
+    <span class="tag">FMEA</span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RELATED WORK
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Publication
+  </div>
+
+  <h2>
+    Related Work
+  </h2>
+
+  <p>
+    A. Halder, C. Goertemiller, A. Hoxie, and W. F. Northrop,
+    “Experimental investigation of a 20 kW atmospheric pressure pure
+    ammonia jet-swirl burner,”
+    <em>Proceedings of the Combustion Institute</em>, 2026.
+  </p>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  © 2026 Aritri Halder. Built with the help of ChatGPT.
+
+</footer>
+
+
+</body>
+</html>
