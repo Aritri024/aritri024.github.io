@@ -1,1320 +1,462 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-  <meta charset="utf-8">
-
+  <meta charset="UTF-8" />
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1">
-
+    content="width=device-width, initial-scale=1.0"
+  />
   <meta
     name="description"
-    content="Aritri Halder - Mechanical Engineer and Ph.D. candidate working on thermal systems, experimental R&D, prototype development, test and validation, optical diagnostics, and engineering data analysis.">
-
-  <title>
-    Aritri Halder | Mechanical Engineer & Researcher
-  </title>
-
-  <link rel="stylesheet" href="styles.css">
-
-
-  <style>
-
-    /* Three selected projects on larger screens */
-
-    @media (min-width: 1000px) {
-
-      #projects .project-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 22px;
-      }
-
-      #projects .card-media,
-      #projects .placeholder {
-        height: 215px;
-      }
-
-      #projects .card-body {
-        padding: 22px;
-      }
-
-      #projects .card h3 {
-        font-size: 1.12rem;
-      }
-
-      #projects .card p {
-        font-size: 0.94rem;
-      }
-
-      #projects .project-highlight {
-        font-size: 0.88rem;
-      }
-
-    }
-
-
-    @media (min-width: 821px) and (max-width: 999px) {
-
-      #projects .project-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-    }
-
-
-    @media (max-width: 820px) {
-
-      #projects .project-grid {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-
-    /* Professional service */
-
-    .service-block {
-      margin-top: 32px;
-      padding-top: 26px;
-      border-top: 1px solid var(--border);
-    }
-
-
-    .service-block h3 {
-      margin: 0 0 14px;
-      color: var(--text);
-      font-size: 1.05rem;
-    }
-
-
-    .service-item {
-      padding: 18px 20px;
-      background: #f7f9fb;
-      border-left: 3px solid var(--accent);
-      border-radius: 0 5px 5px 0;
-    }
-
-
-    .service-item strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--text);
-    }
-
-
-    .service-item span {
-      color: var(--body-text);
-      line-height: 1.6;
-    }
-
-  </style>
-
+    content="Aritri Halder | Mechanical Engineering Ph.D. Candidate at the University of Minnesota Twin Cities. Portfolio of experimental R&D, thermal-fluid systems, combustion diagnostics, and computational heat-transfer projects."
+  />
+  <title>Aritri Halder | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
-
-
 <body>
 
+  <!-- =========================================================
+       NAVIGATION
+  ========================================================= -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Aritri Halder</a>
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#about">About</a>
+        <a href="cv.html">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<header class="site-header">
+  <!-- =========================================================
+       HERO
+  ========================================================= -->
+  <section class="hero">
+    <div class="container hero-grid">
 
-  <div class="container nav">
+      <!-- Left main content -->
+      <div class="hero-main">
 
-    <a
-      class="brand"
-      href="index.html">
-      Aritri Halder
-    </a>
+        <div class="hero-intro-layout">
+          <div class="hero-photo-wrap">
+            <img
+              src="COGS_Portraits_260908_TN_649.jpg"
+              alt="Portrait of Aritri Halder"
+              class="hero-photo"
+            />
+          </div>
 
+          <div class="hero-copy">
+            <div class="eyebrow">
+              Mechanical Engineering · Experimental R&amp;D · Thermal Systems
+            </div>
 
-    <nav
-      class="nav-links"
-      aria-label="Primary navigation">
+            <h1>Aritri Halder</h1>
 
-      <a href="#projects">
-        Projects
-      </a>
+            <h2>
+              Ph.D. Candidate in Mechanical Engineering<br>
+              University of Minnesota - Twin Cities
+            </h2>
 
-      <a href="#experience">
-        Experience
-      </a>
+            <p class="hero-summary">
+              I design, build, instrument, and experimentally validate
+              thermal-fluid systems. My work combines mechanical design,
+              prototype development, controls and data acquisition, optical
+              diagnostics, and quantitative engineering analysis.
+            </p>
 
-      <a href="#publications">
-        Publications
-      </a>
-
-      <a href="#education">
-        Education
-      </a>
-
-      <a href="#about">
-        About
-      </a>
-
-      <a href="cv.html">
-        CV
-      </a>
-
-      <a href="#contact">
-        Contact
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-
-<main>
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section
-  class="hero"
-  id="home">
-
-  <div class="container hero-grid">
-
-
-    <div class="hero-copy">
-
-      <div class="eyebrow">
-        Mechanical Engineering · Experimental R&amp;D · Thermal Systems
-      </div>
-
-
-      <h1>
-        Aritri Halder
-      </h1>
-
-
-      <h2>
-        Ph.D. Candidate in Mechanical Engineering
-        <br>
-        University of Minnesota - Twin Cities
-      </h2>
-
-
-      <p class="lede">
-        I design, build, instrument, and experimentally validate
-        thermal-fluid systems. My work combines mechanical design,
-        prototype development, controls and data acquisition,
-        optical diagnostics, and quantitative engineering analysis.
-      </p>
-
-
-      <div class="button-row">
-
-        <a
-          class="btn primary"
-          href="#projects">
-          View selected work
-        </a>
-
-        <a
-          class="btn secondary"
-          href="cv.html">
-          View CV
-        </a>
-
-        <a
-          class="btn secondary"
-          href="Aritri_Halder_CV_Job.pdf"
-          download>
-          Download CV
-        </a>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects">View selected work</a>
+              <a class="btn secondary" href="cv.html">View CV</a>
+              <a class="btn secondary" href="Aritri_Halder_CV_Job.pdf" download>Download CV</a>
+            </div>
+          </div>
+        </div>
 
       </div>
+
+      <!-- Right focus card -->
+      <aside class="hero-side-card">
+        <div class="side-card">
+          <div class="side-card-title">Technical Focus</div>
+
+          <div class="focus-item">
+            <h3>Mechanical design</h3>
+            <p>SolidWorks · GD&amp;T · DFM/DFA · tolerance analysis</p>
+          </div>
+
+          <div class="focus-item">
+            <h3>Experimental systems</h3>
+            <p>NI cDAQ · LabVIEW · sensors · process controls</p>
+          </div>
+
+          <div class="focus-item no-border">
+            <h3>Diagnostics &amp; analysis</h3>
+            <p>PIV · FTIR · chemiluminescence · CTC · Python/MATLAB</p>
+          </div>
+        </div>
+      </aside>
 
     </div>
+  </section>
 
-
-
-    <aside
-      class="hero-summary"
-      aria-label="Technical focus">
-
-      <div class="hero-summary-label">
-        Technical focus
-      </div>
-
-
-      <div class="hero-summary-item">
-
-        <strong>
-          Mechanical design
-        </strong>
-
-        <span>
-          SolidWorks · GD&amp;T · DFM/DFA · tolerance analysis
-        </span>
-
-      </div>
-
-
-      <div class="hero-summary-item">
-
-        <strong>
-          Experimental systems
-        </strong>
-
-        <span>
-          NI cDAQ · LabVIEW · sensors · process controls
-        </span>
-
-      </div>
-
-
-      <div class="hero-summary-item">
-
-        <strong>
-          Diagnostics &amp; analysis
-        </strong>
-
-        <span>
-          PIV · FTIR · chemiluminescence · CTC · Python/MATLAB
-        </span>
-
-      </div>
-
-    </aside>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SELECTED PROJECTS
-========================================================= -->
-
-<section id="projects">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        Selected projects
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Research and engineering work
-        </h2>
-
-        <p class="section-intro">
-          Selected case studies highlighting mechanical hardware development,
-          experimental diagnostics, and computational thermal-fluid engineering.
+  <!-- =========================================================
+       PROJECTS
+  ========================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Selected Projects</div>
+        <h2>Research and engineering work</h2>
+        <p>
+          Selected work organized around experimental system development,
+          diagnostics and automation, and computational thermal-fluid engineering.
         </p>
-
       </div>
 
-    </div>
+      <div class="project-grid">
 
-
-
-    <div class="project-grid">
-
-
-      <!-- ===================================================
-           PROJECT 1
-      ==================================================== -->
-
-      <article class="card">
-
-        <a
-          class="card-media"
-          href="project-20kw-furnace.html"
-          aria-label="View 20 kW furnace project">
-
-          <img
-            src="Jet-swirl%20burner%20with%20Quartz%20tube.jpeg"
-            alt="Assembled 20 kW jet-swirl burner with quartz optical tube">
-
-        </a>
-
-
-        <div class="card-body">
-
-          <div class="card-kicker">
-            Mechanical design · Experimental R&amp;D
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-media">
+            <img
+              src="Jet-swirl burner with Quartz tube.jpeg"
+              alt="20 kW jet-swirl burner experimental hardware"
+            />
           </div>
 
+          <div class="project-body">
+            <div class="project-kicker">
+              Mechanical Design · Experimental R&amp;D
+            </div>
 
-          <h3>
-            20 kW High-Temperature Furnace &amp; Test Platform
-          </h3>
+            <h3>20 kW High-Temperature Furnace &amp; Test Platform</h3>
 
+            <p>
+              Developed and validated a modular high-temperature experimental
+              platform from CAD concept through fabricated hardware,
+              instrumentation, automated controls, and experimental testing.
+            </p>
 
-          <p>
-            Developed a modular high-temperature experimental system
-            from CAD concept through fabricated hardware, instrumentation,
-            automated controls, and experimental validation.
-          </p>
+            <p class="project-highlight">
+              <strong>Highlights:</strong> SolidWorks hardware development,
+              GD&amp;T/tolerance analysis, three-stream gas delivery,
+              NI cDAQ/LabVIEW, DOE, FTIR and PIV.
+            </p>
 
+            <div class="tags">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">GD&amp;T</span>
+              <span class="tag">DFM/DFA</span>
+              <span class="tag">LabVIEW</span>
+              <span class="tag">PIV</span>
+            </div>
 
-          <div class="project-highlight">
+            <a class="project-link" href="project-20kw-furnace.html">
+              View case study →
+            </a>
+          </div>
+        </article>
 
-            <strong>
-              Highlights:
-            </strong>
-
-            SolidWorks design, GD&amp;T, DFM/DFA, gas delivery,
-            NI cDAQ/LabVIEW, DOE, FTIR, and PIV.
-
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-media">
+            <img
+              src="CTC-setup-actual.jpeg"
+              alt="Single-camera rotational CT experimental setup"
+            />
           </div>
 
+          <div class="project-body">
+            <div class="project-kicker">
+              Optical Diagnostics · Automation
+            </div>
 
-          <div class="tags">
+            <h3>Single-Camera Rotational CT System</h3>
 
-            <span class="tag">SolidWorks</span>
-            <span class="tag">GD&amp;T</span>
-            <span class="tag">DFM/DFA</span>
-            <span class="tag">LabVIEW</span>
-            <span class="tag">PIV</span>
+            <p>
+              Built a compact rotational computed-tomography measurement
+              system and automated image-processing workflow for multi-angle
+              optical experiments.
+            </p>
 
+            <p class="project-highlight">
+              <strong>Highlights:</strong> single-camera mechanism, calibration
+              workflow, Python/MATLAB batch processing, CTC flame reconstruction,
+              PIV integration, RCA and FMEA.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Computed Tomography</span>
+              <span class="tag">Python</span>
+              <span class="tag">MATLAB</span>
+              <span class="tag">Image Processing</span>
+            </div>
+
+            <a class="project-link" href="project-ct-system.html">
+              View case study →
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-media project-media-placeholder">
+            <div class="placeholder-label">CFD geometry / contour figure</div>
           </div>
 
+          <div class="project-body">
+            <div class="project-kicker">
+              CFD · Thermal Management
+            </div>
 
-          <a
-            class="card-link"
-            href="project-20kw-furnace.html">
-            View case study →
-          </a>
+            <h3>Minichannel Heat-Sink Thermal-Fluid Optimization</h3>
 
-        </div>
+            <p>
+              Evaluated modified internal insert geometries using ANSYS Fluent,
+              parameterized CFD studies, and mesh-convergence analysis for
+              compact thermal-management applications.
+            </p>
 
-      </article>
+            <p class="project-highlight">
+              <strong>Highlights:</strong> conjugate heat transfer, numerical
+              validation, thermohydraulic tradeoff analysis, and performance
+              evaluation criteria.
+            </p>
 
+            <div class="tags">
+              <span class="tag">ANSYS Fluent</span>
+              <span class="tag">CFD</span>
+              <span class="tag">Mesh Convergence</span>
+              <span class="tag">Heat Transfer</span>
+            </div>
 
-
-      <!-- ===================================================
-           PROJECT 2
-      ==================================================== -->
-
-      <article class="card">
-
-        <a
-          class="card-media"
-          href="project-ct-system.html"
-          aria-label="View optical diagnostics project">
-
-          <img
-            src="CTC-setup-actual.jpeg"
-            alt="Computed tomography of chemiluminescence experimental setup">
-
-        </a>
-
-
-        <div class="card-body">
-
-          <div class="card-kicker">
-            Optical diagnostics · Experimental measurement
+            <a class="project-link" href="project-minichannel.html">
+              View case study →
+            </a>
           </div>
-
-
-          <h3>
-            PIV &amp; 3D Flame Reconstruction
-          </h3>
-
-
-          <p>
-            Developed and applied laser- and camera-based diagnostics
-            to quantify flow structure, turbulence, recirculation,
-            and three-dimensional flame behavior.
-          </p>
-
-
-          <div class="project-highlight">
-
-            <strong>
-              Highlights:
-            </strong>
-
-            Reactive PIV, multi-angle flame imaging, CTC reconstruction,
-            camera calibration, and automated Python/MATLAB processing.
-
-          </div>
-
-
-          <div class="tags">
-
-            <span class="tag">PIV</span>
-            <span class="tag">CTC</span>
-            <span class="tag">Laser Diagnostics</span>
-            <span class="tag">Python</span>
-            <span class="tag">MATLAB</span>
-
-          </div>
-
-
-          <a
-            class="card-link"
-            href="project-ct-system.html">
-            View case study →
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- ===================================================
-           PROJECT 3
-      ==================================================== -->
-
-      <article class="card">
-
-        <div class="placeholder">
-
-          <span>
-            CFD geometry / contour figure
-          </span>
-
-        </div>
-
-
-        <div class="card-body">
-
-          <div class="card-kicker">
-            CFD · Thermal management
-          </div>
-
-
-          <h3>
-            Minichannel Heat-Sink Thermal-Fluid Optimization
-          </h3>
-
-
-          <p>
-            Evaluated modified internal insert geometries using
-            ANSYS Fluent, parameterized CFD studies, and
-            mesh-convergence analysis.
-          </p>
-
-
-          <div class="project-highlight">
-
-            <strong>
-              Result:
-            </strong>
-
-            Modified insert geometry improved thermal-fluid
-            performance by up to 28%.
-
-          </div>
-
-
-          <div class="tags">
-
-            <span class="tag">ANSYS Fluent</span>
-            <span class="tag">CFD</span>
-            <span class="tag">Mesh Convergence</span>
-            <span class="tag">Heat Transfer</span>
-
-          </div>
-
-
-          <a
-            class="card-link"
-            href="project-minichannel.html">
-            View case study →
-          </a>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     EXPERIENCE
-========================================================= -->
-
-<section id="experience">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        Experience
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Research and engineering experience
-        </h2>
-
-        <p class="section-intro">
-          Experience spanning experimental system development,
-          thermal-fluid engineering, diagnostics, and computational analysis.
-        </p>
+        </article>
 
       </div>
-
     </div>
+  </section>
 
+  <!-- =========================================================
+       EXPERIENCE
+  ========================================================= -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Experience</div>
+        <h2>Research and engineering experience</h2>
+      </div>
 
+      <div class="timeline">
 
-    <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <div>
+              <h3>Graduate Research Assistant</h3>
+              <p class="timeline-org">University of Minnesota Twin Cities</p>
+            </div>
+            <div class="timeline-date">Aug 2023 - Present</div>
+          </div>
 
+          <ul class="timeline-list">
+            <li>
+              Designed, built, commissioned, tested, and validated a 20 kW
+              experimental furnace and modular combustion hardware for
+              repeatable thermal-fluid testing and engineering evaluation.
+            </li>
+            <li>
+              Developed SolidWorks hardware, engineering drawings, tolerance
+              stack-ups, and BOMs; integrated gas-delivery hardware, sensors,
+              NI cDAQ instrumentation, and LabVIEW-based controls.
+            </li>
+            <li>
+              Built and applied optical diagnostics and analysis workflows
+              including PIV, FTIR, chemiluminescence imaging, and
+              computed-tomography-based flame reconstruction.
+            </li>
+            <li>
+              Automated data reduction and analysis using Python and MATLAB,
+              and used RCA/FMEA-style troubleshooting to improve system
+              reliability and repeatability.
+            </li>
+          </ul>
+        </article>
 
-      <!-- University of Minnesota -->
+        <article class="timeline-item">
+          <div class="timeline-head">
+            <div>
+              <h3>Research Assistant</h3>
+              <p class="timeline-org">Indian Institute of Engineering Science and Technology, Shibpur</p>
+            </div>
+            <div class="timeline-date">Before Ph.D.</div>
+          </div>
 
-      <div class="timeline-item">
+          <ul class="timeline-list">
+            <li>
+              Conducted computational thermal-fluid studies involving
+              minichannel heat sinks and heat-transfer enhancement using ANSYS Fluent.
+            </li>
+            <li>
+              Worked on simulation-based engineering projects including
+              fluid-structure interaction and wake-flow analysis.
+            </li>
+          </ul>
+        </article>
 
-        <div class="timeline-date">
-          Oct 2024 - Present
-        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- =========================================================
+       PUBLICATIONS
+  ========================================================= -->
+  <section class="section" id="publications">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Publications &amp; Presentations</div>
+        <h2>Selected scholarly work</h2>
+      </div>
 
+      <div class="publication-list">
+
+        <article class="publication-item">
+          <h3>
+            Experimental investigation of a 20 kW atmospheric pressure pure
+            ammonia jet-swirl burner
+          </h3>
+          <p>
+            A. Halder, C. Goertemiller, A. Hoxie, and W. F. Northrop
+          </p>
+          <p>
+            <em>Proceedings of the Combustion Institute</em>, 2026.
+          </p>
+        </article>
+
+        <article class="publication-item">
+          <h3>
+            Experimental investigation of premixed pure ammonia combustion in
+            novel vortex tube burner
+          </h3>
+          <p>
+            Presented at the 4th Symposium on Ammonia Energy.
+          </p>
+          <p>
+            Received <strong>Best Abstract in Thermal Applications</strong>.
+          </p>
+        </article>
+
+        <article class="publication-item">
+          <h3>
+            Computer Simulations on Heat Transfer Enhancement in a
+            Minichannel Heat Sink using Modified Butterfly Inserts
+          </h3>
+          <p>
+            Aritri Halder, Rahul Pandey, and Umesh Madanan
+          </p>
+          <p>
+            Proceedings of the 27th National and 5th International
+            ISHMT-ASTFE Heat and Mass Transfer Conference, IIT Patna, India.
+          </p>
+        </article>
+
+        <article class="publication-item">
+          <h3>Professional Service</h3>
+          <p>
+            Reviewer, <em>Combustion Science and Technology</em>.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT
+  ========================================================= -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">About</div>
+        <h2>Technical profile</h2>
+      </div>
+
+      <div class="about-grid">
         <div>
-
-          <h3>
-            Graduate Research Assistant
-          </h3>
-
-          <h4>
-            University of Minnesota - T.E. Murphy Engine Lab · Minneapolis, MN
-          </h4>
-
           <p>
-            Developing and validating a 20 kW high-temperature experimental
-            system; producing SolidWorks CAD, GD&amp;T drawings, tolerance
-            analyses and BOMs; integrating gas delivery, sensors, NI cDAQ
-            and LabVIEW; and applying FTIR, PIV, chemiluminescence, CTC,
-            Python and MATLAB for performance characterization.
+            I am a Mechanical Engineering Ph.D. candidate at the University
+            of Minnesota Twin Cities, where I work on experimental thermal-fluid
+            systems with an emphasis on combustion, diagnostics, and system development.
           </p>
 
-        </div>
-
-      </div>
-
-
-
-      <!-- Jadavpur -->
-
-      <div class="timeline-item">
-
-        <div class="timeline-date">
-          Aug 2022 - Jun 2023
-        </div>
-
-
-        <div>
-
-          <h3>
-            Research Assistant
-          </h3>
-
-          <h4>
-            Jadavpur University - Microfluidics Lab · Kolkata, India
-          </h4>
-
           <p>
-            Executed parallel C/C++ simulations on HPC for unsteady
-            fluid-structure interaction at Re = 250. Conducted parametric
-            studies across Strouhal number and pitching phase and used
-            Tecplot to analyze wake dynamics, vorticity, and flow separation.
+            My research combines mechanical design, instrumentation, automated
+            data acquisition, optical diagnostics, and engineering analysis.
+            I am especially interested in roles that sit at the intersection
+            of R&amp;D, product development, testing, and system integration.
           </p>
-
         </div>
 
+        <div class="skill-block">
+          <h3>Technical Skills</h3>
+
+          <div class="skill-group">
+            <h4>Software &amp; Programming</h4>
+            <p>Python, MATLAB, SolidWorks, ANSYS Fluent, LabVIEW</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Experimental &amp; Diagnostics</h4>
+            <p>PIV, FTIR, chemiluminescence imaging, CTC, DAQ, MFC-based gas delivery</p>
+          </div>
+
+          <div class="skill-group">
+            <h4>Engineering Methods</h4>
+            <p>GD&amp;T, DFM/DFA, DOE, data analysis, validation, troubleshooting, RCA/FMEA</p>
+          </div>
+        </div>
       </div>
-
-
-
-      <!-- IIT Kanpur -->
-
-      <div class="timeline-item">
-
-        <div class="timeline-date">
-          May 2022 - Jul 2022
-        </div>
-
-
-        <div>
-
-          <h3>
-            Research Intern
-          </h3>
-
-          <h4>
-            IIT Kanpur - Experimental Thermofluids Laboratory · Kanpur, India
-          </h4>
-
-          <p>
-            Performed ANSYS Fluent mesh-convergence and geometry studies
-            for minichannel heat-sink thermal management. Evaluated modified
-            insert geometries and quantified pressure-drop and thermal-fluid
-            performance, achieving up to 28% improvement.
-          </p>
-
-        </div>
-
-      </div>
-
-
     </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PUBLICATIONS, PRESENTATIONS & SERVICE
-========================================================= -->
-
-<section id="publications">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        Research output
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Publications, presentations &amp; professional service
-        </h2>
-
-        <p class="section-intro">
-          Selected scholarly work, conference activity, and professional
-          contributions in combustion and thermal-fluid engineering.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="pub-list">
-
-
-      <!-- Publication 1 -->
-
-      <div class="pub">
-
-        <div class="pub-title">
-          Experimental investigation of a 20 kW atmospheric pressure
-          pure ammonia jet-swirl burner
-        </div>
-
-        <div class="pub-meta">
-          A. Halder, C. Goertemiller, A. Hoxie, and W. F. Northrop ·
-          Proceedings of the Combustion Institute · 2026
-        </div>
-
-        <div class="pub-links">
-          <span class="muted-link">
-            Paper link can be added here
-          </span>
-        </div>
-
-      </div>
-
-
-
-      <!-- Publication 2 -->
-
-      <div class="pub">
-
-        <div class="pub-title">
-          Computer simulations on heat transfer enhancement in a
-          minichannel heat sink using modified butterfly inserts
-        </div>
-
-        <div class="pub-meta">
-          A. Halder, R. Pandey, and U. Madanan ·
-          ISHMT-ASTFE Heat and Mass Transfer Conference ·
-          2024 · pp. 149–154
-        </div>
-
-        <div class="pub-links">
-          <span class="muted-link">
-            Paper / DOI link can be added here
-          </span>
-        </div>
-
-      </div>
-
-
-
-      <!-- Work in progress -->
-
-      <div class="pub">
-
-        <div class="pub-title">
-          Stability and Emissions Profile of a 120 kW Fuel-Flexible
-          Jet-Swirl Burner Operating on Ammonia
-        </div>
-
-        <div class="pub-meta">
-          A. Halder et al. · Transformative Energy · In progress
-        </div>
-
-      </div>
-
-
-
-      <!-- Presentations -->
-
-      <div class="pub">
-
-        <div class="pub-title">
-          Oral and poster presentations
-        </div>
-
-        <div class="pub-meta">
-          Five presentations at international and U.S. technical meetings,
-          including the 41st International Symposium on Combustion
-          (Kyoto, Japan, 2026), the 14th U.S. National Combustion Meeting
-          (Boston, MA, 2025), and the 4th Symposium on Ammonia Energy (2025).
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- Professional service -->
-
-    <div class="service-block">
-
-      <h3>
-        Professional Service
-      </h3>
-
-
-      <div class="service-item">
-
-        <strong>
-          Peer Reviewer
-        </strong>
-
-        <span>
-          <em>Combustion Science and Technology</em>
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     EDUCATION
-========================================================= -->
-
-<section id="education">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        Education
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Academic background
-        </h2>
-
-        <p class="section-intro">
-          Mechanical engineering education with emphasis on thermal-fluid
-          systems and experimental research.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="education-grid">
-
-
-      <div class="education-card">
-
-        <div class="education-date">
-          Expected June 2027
-        </div>
-
-        <h3>
-          Ph.D., Mechanical Engineering
-        </h3>
-
+  </section>
+
+  <!-- =========================================================
+       CONTACT
+  ========================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">Contact</div>
+        <h2>Get in touch</h2>
         <p>
-          University of Minnesota - Twin Cities · Minneapolis, MN
+          For research, collaboration, or professional opportunities, feel free to reach out.
         </p>
-
       </div>
 
-
-
-      <div class="education-card">
-
-        <div class="education-date">
-          July 2023
-        </div>
-
-        <h3>
-          B.E., Mechanical Engineering
-        </h3>
-
-        <p>
-          Jadavpur University · Kolkata, India
-        </p>
-
+      <div class="contact-card">
+        <p><strong>GitHub:</strong> <a href="https://github.com/Aritri024" target="_blank" rel="noopener">github.com/Aritri024</a></p>
+        <p><strong>CV:</strong> <a href="Aritri_Halder_CV_Job.pdf" target="_blank" rel="noopener">Open current CV</a></p>
+        <p><strong>LinkedIn / Google Scholar:</strong> add links here when ready</p>
+        <p><strong>Email:</strong> add professional email here if you want it displayed</p>
       </div>
-
-
     </div>
+  </section>
 
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SKILLS
-========================================================= -->
-
-<section id="skills">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        Skills
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Technical toolkit
-        </h2>
-
-        <p class="section-intro">
-          Tools and methods used across mechanical design,
-          experimental testing, diagnostics, and analysis.
-        </p>
-
-      </div>
-
+  <!-- =========================================================
+       FOOTER
+  ========================================================= -->
+  <footer class="footer">
+    <div class="container">
+      © 2026 Aritri Halder · Mechanical Engineering Portfolio
     </div>
-
-
-
-    <div class="skill-groups">
-
-
-      <div class="skill-group">
-
-        <h3>
-          Mechanical Design &amp; Manufacturing
-        </h3>
-
-        <p>
-          SolidWorks, engineering drawings, GD&amp;T, DFM/DFA,
-          tolerance stack-up, fit/clearance analysis, BOMs,
-          materials selection, prototyping, AutoCAD,
-          Autodesk Fusion 360.
-        </p>
-
-      </div>
-
-
-
-      <div class="skill-group">
-
-        <h3>
-          Instrumentation &amp; Test
-        </h3>
-
-        <p>
-          NI cDAQ, LabVIEW, mass flow controllers,
-          pressure/temperature sensors, synchronized data acquisition,
-          calibration, test automation, DOE, and SOPs.
-        </p>
-
-      </div>
-
-
-
-      <div class="skill-group">
-
-        <h3>
-          Diagnostics &amp; Data Analysis
-        </h3>
-
-        <p>
-          PIV, FTIR spectroscopy, chemiluminescence imaging,
-          computed tomography of chemiluminescence,
-          Python, MATLAB, image processing, statistical analysis,
-          and workflow automation.
-        </p>
-
-      </div>
-
-
-
-      <div class="skill-group">
-
-        <h3>
-          Modeling &amp; Simulation
-        </h3>
-
-        <p>
-          ANSYS Fluent, CFD, FVM, FEM, heat transfer,
-          thermal-fluid modeling, numerical methods,
-          mesh convergence, HPC, C/C++, Tecplot, and Cantera.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     ABOUT
-========================================================= -->
-
-<section id="about">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        About
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Mechanical engineer and experimental researcher
-        </h2>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="about-grid">
-
-
-      <div>
-
-        <p>
-          I am a Mechanical Engineering Ph.D. candidate at the
-          University of Minnesota working on high-temperature thermal-fluid
-          systems and experimental engineering. My current research combines
-          mechanical design and prototype development with process-gas delivery,
-          instrumentation, automated controls, and optical diagnostics.
-        </p>
-
-        <p>
-          Across my projects, I work from physical system design through
-          commissioning, measurement, troubleshooting, and quantitative
-          analysis. My earlier research includes CFD-based thermal-management
-          studies and HPC simulations of fluid-structure interaction.
-        </p>
-
-      </div>
-
-
-
-      <div class="contact-box">
-
-        <ul class="info-list">
-
-          <li>
-
-            <strong>
-              Current role
-            </strong>
-
-            <br>
-
-            Graduate Research Assistant,
-            T.E. Murphy Engine Lab
-
-          </li>
-
-
-          <li>
-
-            <strong>
-              Location
-            </strong>
-
-            <br>
-
-            Minneapolis, MN
-
-          </li>
-
-
-          <li>
-
-            <strong>
-              Awards
-            </strong>
-
-            <br>
-
-            Chester E. Dekko Fdn Endowed Graduate Fellowship,
-            2024–2025
-
-            <br><br>
-
-            Best Abstract - Thermal Applications,
-            4th Symposium on Ammonia Energy, 2025
-
-          </li>
-
-        </ul>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CV
-========================================================= -->
-
-<section id="cv">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        CV
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Curriculum Vitae
-        </h2>
-
-        <p class="section-intro">
-          View my full CV online or download a PDF copy.
-        </p>
-
-
-        <div class="button-row">
-
-          <a
-            class="btn primary"
-            href="cv.html">
-            View CV
-          </a>
-
-          <a
-            class="btn secondary"
-            href="Aritri_Halder_CV_Job.pdf"
-            target="_blank"
-            rel="noopener">
-            Open PDF
-          </a>
-
-          <a
-            class="btn secondary"
-            href="Aritri_Halder_CV_Job.pdf"
-            download>
-            Download CV
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section id="contact">
-
-  <div class="container">
-
-
-    <div class="section-head">
-
-      <div class="section-kicker">
-        Contact
-      </div>
-
-
-      <div>
-
-        <h2 class="section-title">
-          Get in touch
-        </h2>
-
-        <p class="section-intro">
-          Professional contact and profile links.
-        </p>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="contact-grid">
-
-
-      <a
-        class="contact-item"
-        href="mailto:aritrihalder2001@gmail.com">
-
-        <span>
-          Email
-        </span>
-
-        <strong>
-          aritrihalder2001@gmail.com
-        </strong>
-
-      </a>
-
-
-
-      <a
-        class="contact-item"
-        href="https://www.linkedin.com/in/aritri-halder/"
-        target="_blank"
-        rel="noopener">
-
-        <span>
-          LinkedIn
-        </span>
-
-        <strong>
-          linkedin.com/in/aritri-halder
-        </strong>
-
-      </a>
-
-
-
-      <a
-        class="contact-item"
-        href="https://github.com/Aritri024"
-        target="_blank"
-        rel="noopener">
-
-        <span>
-          GitHub
-        </span>
-
-        <strong>
-          github.com/Aritri024
-        </strong>
-
-      </a>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-</main>
-
-
-
-<footer class="footer">
-
-  <div class="container">
-    © 2026 Aritri Halder · Mechanical Engineering Portfolio
-  </div>
-
-</footer>
-
+  </footer>
 
 </body>
-
 </html>
