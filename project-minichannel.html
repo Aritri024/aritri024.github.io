@@ -1,35 +1,2114 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Minichannel Heat-Sink Thermal-Fluid Optimization | Aritri Halder</title><link rel="stylesheet" href="styles.css"></head>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="CFD and thermal-management project by Aritri Halder investigating heat-transfer enhancement in a minichannel heat sink using modified butterfly inserts and ANSYS Fluent.">
+
+  <title>
+    Minichannel Heat-Sink Thermal-Fluid Optimization | Aritri Halder
+  </title>
+
+  <link rel="stylesheet" href="styles.css">
+
+
+  <style>
+
+    /* =========================================================
+       MINICHANNEL HERO
+    ========================================================= */
+
+    .minichannel-hero {
+      padding: 62px 0 56px;
+      background: #f7f9fb;
+      border-bottom: 1px solid var(--border);
+    }
+
+
+    .minichannel-hero-inner {
+      width: min(
+        var(--max-width),
+        calc(100% - 40px)
+      );
+
+      margin: 0 auto;
+    }
+
+
+    .minichannel-label {
+      margin-bottom: 14px;
+
+      color: var(--accent);
+
+      font-size: 0.74rem;
+      font-weight: 700;
+
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+
+    .minichannel-hero h1 {
+      max-width: 950px;
+
+      margin: 0 0 18px;
+
+      color: var(--text);
+
+      font-size: clamp(
+        2.5rem,
+        5vw,
+        4rem
+      );
+
+      line-height: 1.06;
+
+      letter-spacing: -0.035em;
+    }
+
+
+    .minichannel-summary {
+      max-width: 850px;
+
+      margin: 0;
+
+      color: var(--body-text);
+
+      font-size: 1.06rem;
+      line-height: 1.72;
+    }
+
+
+    .minichannel-back {
+      display: inline-block;
+
+      margin-top: 24px;
+
+      color: var(--accent);
+
+      font-weight: 500;
+
+      text-decoration: none;
+    }
+
+
+    .minichannel-back:hover {
+      text-decoration: underline;
+    }
+
+
+
+    /* =========================================================
+       LARGE FEATURE FIGURES
+    ========================================================= */
+
+    .feature-figure {
+      max-width: 950px;
+
+      margin: 26px 0 0;
+
+      overflow: hidden;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+
+    .feature-figure-media {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      min-height: 380px;
+
+      padding: 22px;
+
+      background: #f7f8fa;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+
+    .feature-figure-media img {
+      width: auto;
+      height: auto;
+
+      max-width: 100%;
+      max-height: 560px;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    .feature-caption {
+      padding: 18px 21px 21px;
+    }
+
+
+    .feature-caption strong {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--text);
+
+      font-size: 0.98rem;
+    }
+
+
+    .feature-caption p {
+      margin: 0;
+
+      color: var(--body-text);
+
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+
+
+    /* =========================================================
+       CONFIGURATION CARDS
+    ========================================================= */
+
+    .configuration-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0, 1fr)
+        );
+
+      gap: 18px;
+
+      margin-top: 26px;
+    }
+
+
+    .configuration-card {
+      padding: 21px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: 7px;
+    }
+
+
+    .configuration-label {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--accent);
+
+      font-size: 0.69rem;
+      font-weight: 700;
+
+      letter-spacing: 0.09em;
+
+      text-transform: uppercase;
+    }
+
+
+    .configuration-card h3 {
+      margin: 0 0 8px;
+
+      color: var(--text);
+
+      font-size: 1rem;
+    }
+
+
+    .configuration-card p {
+      margin: 0;
+
+      color: var(--body-text);
+
+      font-size: 0.88rem;
+      line-height: 1.63;
+    }
+
+
+
+    /* =========================================================
+       NUMERICAL METHOD
+    ========================================================= */
+
+    .minichannel-method-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 25px 36px;
+
+      margin-top: 25px;
+    }
+
+
+    .minichannel-method-card {
+      padding-top: 17px;
+
+      border-top: 2px solid var(--accent);
+    }
+
+
+    .minichannel-method-card h3 {
+      margin: 0 0 8px;
+
+      color: var(--text);
+
+      font-size: 1rem;
+    }
+
+
+    .minichannel-method-card p {
+      margin: 0;
+
+      color: var(--body-text);
+
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+
+
+    /* =========================================================
+       DETAIL ROWS
+    ========================================================= */
+
+    .minichannel-detail-list {
+      margin-top: 24px;
+    }
+
+
+    .minichannel-detail-row {
+      display: grid;
+
+      grid-template-columns:
+        205px
+        minmax(0, 1fr);
+
+      gap: 30px;
+
+      padding: 18px 0;
+
+      border-top: 1px solid var(--border);
+    }
+
+
+    .minichannel-detail-row:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+
+    .minichannel-detail-title {
+      color: var(--text);
+
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+
+    .minichannel-detail-description {
+      color: var(--body-text);
+
+      line-height: 1.7;
+    }
+
+
+
+    /* =========================================================
+       CFD CONTOUR COMPARISON
+    ========================================================= */
+
+    .cfd-comparison {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 22px;
+
+      margin-top: 25px;
+    }
+
+
+    .cfd-card {
+      margin: 0;
+
+      overflow: hidden;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+
+    .cfd-media {
+      height: 350px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 16px;
+
+      overflow: hidden;
+
+      background: #f7f8fa;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+
+    .cfd-media img {
+      width: auto;
+      height: auto;
+
+      max-width: 100%;
+      max-height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+    }
+
+
+    .cfd-caption {
+      padding: 18px 20px 20px;
+    }
+
+
+    .cfd-caption-label {
+      display: block;
+
+      margin-bottom: 6px;
+
+      color: var(--accent);
+
+      font-size: 0.68rem;
+      font-weight: 700;
+
+      letter-spacing: 0.1em;
+
+      text-transform: uppercase;
+    }
+
+
+    .cfd-caption h3 {
+      margin: 0 0 7px;
+
+      color: var(--text);
+
+      font-size: 1rem;
+    }
+
+
+    .cfd-caption p {
+      margin: 0;
+
+      color: var(--body-text);
+
+      font-size: 0.87rem;
+      line-height: 1.62;
+    }
+
+
+
+    /* =========================================================
+       RESULT CARDS
+    ========================================================= */
+
+    .minichannel-result-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0, 1fr)
+        );
+
+      gap: 18px;
+
+      margin-top: 27px;
+    }
+
+
+    .minichannel-result-card {
+      padding: 23px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: 7px;
+    }
+
+
+    .minichannel-result-number {
+      display: block;
+
+      margin-bottom: 9px;
+
+      color: var(--accent);
+
+      font-size: 2rem;
+      font-weight: 700;
+
+      line-height: 1;
+    }
+
+
+    .minichannel-result-card h3 {
+      margin: 0 0 8px;
+
+      color: var(--text);
+
+      font-size: 1rem;
+    }
+
+
+    .minichannel-result-card p {
+      margin: 0;
+
+      color: var(--body-text);
+
+      font-size: 0.88rem;
+      line-height: 1.62;
+    }
+
+
+
+    /* =========================================================
+       CALLOUT
+    ========================================================= */
+
+    .engineering-callout {
+      max-width: 900px;
+
+      margin-top: 26px;
+
+      padding: 24px 27px;
+
+      background: #f7f9fb;
+
+      border-left: 4px solid var(--accent);
+    }
+
+
+    .engineering-callout h3 {
+      margin: 0 0 8px;
+
+      color: var(--text);
+
+      font-size: 1.02rem;
+    }
+
+
+    .engineering-callout p {
+      margin: 0;
+
+      color: #4d5e70;
+
+      line-height: 1.7;
+    }
+
+
+
+    /* =========================================================
+       PUBLICATION
+    ========================================================= */
+
+    .minichannel-publication {
+      max-width: 900px;
+
+      padding: 23px 25px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: 7px;
+    }
+
+
+    .minichannel-publication h3 {
+      margin: 0 0 9px;
+
+      color: var(--text);
+
+      font-size: 1.04rem;
+      line-height: 1.5;
+    }
+
+
+    .minichannel-publication p {
+      margin: 0 0 6px;
+
+      color: var(--body-text);
+
+      line-height: 1.65;
+    }
+
+
+    .minichannel-publication p:last-child {
+      margin-bottom: 0;
+    }
+
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 850px) {
+
+      .configuration-grid,
+      .minichannel-result-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 700px) {
+
+      .minichannel-hero {
+        padding: 48px 0 44px;
+      }
+
+
+      .minichannel-hero h1 {
+        font-size: 2.35rem;
+      }
+
+
+      .cfd-comparison,
+      .minichannel-method-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .cfd-media {
+        height: 300px;
+      }
+
+
+      .feature-figure-media {
+        min-height: 280px;
+      }
+
+
+      .minichannel-detail-row {
+        grid-template-columns: 1fr;
+
+        gap: 6px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
 <body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
 <header class="site-header">
+
   <div class="container nav">
-    <a class="brand" href="index.html">Aritri Halder</a>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="index.html#projects">Projects</a>
-      <a href="index.html#experience">Experience</a>
-      <a href="index.html#publications">Publications</a>
-      <a href="index.html#about">About</a>
-      <a href="cv.html">CV</a>
-      <a href="index.html#contact">Contact</a>
+
+    <a
+      class="brand"
+      href="index.html">
+      Aritri Halder
+    </a>
+
+
+    <nav
+      class="nav-links"
+      aria-label="Primary navigation">
+
+      <a href="index.html#projects">
+        Projects
+      </a>
+
+      <a href="index.html#experience">
+        Experience
+      </a>
+
+      <a href="index.html#publications">
+        Publications
+      </a>
+
+      <a href="index.html#education">
+        Education
+      </a>
+
+      <a href="index.html#about">
+        About
+      </a>
+
+      <a href="cv.html">
+        CV
+      </a>
+
+      <a href="index.html#contact">
+        Contact
+      </a>
+
     </nav>
+
   </div>
+
 </header>
 
-<main>
-  <header class="project-hero"><div class="container"><div class="eyebrow">Project</div><h1>Minichannel Heat-Sink Thermal-Fluid Optimization</h1><p class="lede">CFD, mesh convergence, and geometry evaluation for thermal management.</p><a href="index.html#projects">← Back to selected projects</a></div></header>
-  <div class="container project-layout">
-    <article class="project-main">
-      <section><h2>Overview</h2><p>At IIT Kanpur, I performed a parameterized CFD study of minichannel heat-sink performance using ANSYS Fluent.</p></section>
-      <section><h2>Problem</h2><p>The goal was to evaluate how modified internal insert geometry affected minichannel thermal-fluid performance while ensuring the numerical results were independent of mesh size.</p></section>
-      <section><h2>Approach</h2><ul><li>Ran parameterized mesh-convergence studies in ANSYS Fluent.</li><li>Evaluated modified internal insert geometries using CFD results.</li></ul></section>
-      <section><h2>Results</h2><ul><li>Modified insert geometry improved minichannel thermal-fluid performance by up to 28%.</li></ul></section>
-      <section><h2>Figures</h2><div class="figure-placeholder">PLACEHOLDER — Add the minichannel geometry, computational mesh, convergence plot, contour plot, or performance comparison.</div></section>
-      <section><h2>Related work</h2><p>Related publication: “Computer simulations on heat transfer enhancement in a minichannel heat sink using modified butterfly inserts,” ISHMT-ASTFE Heat and Mass Transfer Conference, pp. 149-154, 2024. Add the paper/DOI link when available.</p></section>
-    </article>
-    <aside class="sidebar"><h3>Tools / Methods</h3><div class="tags"><span class="tag">ANSYS Fluent</span><span class="tag">CFD</span><span class="tag">Mesh Convergence</span><span class="tag">Heat Transfer</span><span class="tag">Thermal-Fluid Modeling</span></div><div class="note" style="margin-top:22px;">This page intentionally contains only information supported by the resume. Add figures, links, captions, and further technical detail later.</div></aside>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="minichannel-hero">
+
+  <div class="minichannel-hero-inner">
+
+    <div class="minichannel-label">
+      CFD · Heat Transfer · Thermal Management
+    </div>
+
+
+    <h1>
+      Minichannel Heat-Sink Thermal-Fluid Optimization
+    </h1>
+
+
+    <p class="minichannel-summary">
+      Numerical investigation of modified butterfly inserts for passive
+      heat-transfer enhancement in a water-cooled minichannel heat sink,
+      combining three-dimensional conjugate heat-transfer CFD,
+      mesh-convergence analysis, numerical validation, flow-field
+      interpretation, and thermohydraulic performance evaluation.
+    </p>
+
+
+    <a
+      href="index.html#projects"
+      class="minichannel-back">
+      ← Back to selected projects
+    </a>
+
   </div>
+
+</header>
+
+
+
+<main class="project-page">
+
+
+<!-- =========================================================
+     QUICK FACTS
+========================================================= -->
+
+<section class="project-facts">
+
+
+  <div class="project-fact">
+
+    <span class="project-fact-label">
+      Solver
+    </span>
+
+    <span class="project-fact-value">
+      ANSYS Fluent 2021 R2
+    </span>
+
+  </div>
+
+
+
+  <div class="project-fact">
+
+    <span class="project-fact-label">
+      Flow Regime
+    </span>
+
+    <span class="project-fact-value">
+      Laminar · Re = 200–900
+    </span>
+
+  </div>
+
+
+
+  <div class="project-fact">
+
+    <span class="project-fact-label">
+      Working Fluid
+    </span>
+
+    <span class="project-fact-value">
+      Deionized water
+    </span>
+
+  </div>
+
+
+
+  <div class="project-fact">
+
+    <span class="project-fact-label">
+      Insert Pitch
+    </span>
+
+    <span class="project-fact-value">
+      5 mm &amp; 10 mm
+    </span>
+
+  </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     OVERVIEW
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Overview
+  </div>
+
+
+  <h2>
+    Improving heat transfer in a compact cooling channel
+  </h2>
+
+
+  <p>
+    Compact electronic and thermal systems can generate substantial heat
+    flux while leaving limited space for cooling hardware. Minichannel heat
+    sinks provide high surface-area-to-volume ratios, but increasing heat
+    transfer can also increase pressure drop and the pumping power required
+    to move coolant through the channel.
+  </p>
+
+
+  <p>
+    This project investigated a passive heat-transfer enhancement strategy
+    using modified butterfly inserts arranged inside a square minichannel.
+    Consecutive inserts were oriented orthogonally to redirect the coolant,
+    increase flow mixing, and repeatedly disrupt development of the thermal
+    boundary layer.
+  </p>
+
+
+  <div class="two-column-text">
+
+
+    <div class="text-panel">
+
+      <h3>
+        Engineering Question
+      </h3>
+
+      <p>
+        Can the heat-transfer enhancement created by an internal insert
+        geometry outweigh the corresponding increase in hydraulic resistance?
+      </p>
+
+    </div>
+
+
+
+    <div class="text-panel">
+
+      <h3>
+        Study Approach
+      </h3>
+
+      <p>
+        Three-dimensional conjugate heat-transfer simulations were performed
+        for a baseline plain minichannel and modified butterfly-insert
+        configurations over Reynolds numbers from 200 to 900.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GEOMETRY
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Geometry &amp; Design
+  </div>
+
+
+  <h2>
+    Modified butterfly-insert concept
+  </h2>
+
+
+  <p>
+    The computational domain represented a 100 mm-long square minichannel
+    with a hydraulic diameter of 2 mm. Copper was used for the heat-sink
+    substrate and deionized water was used as the coolant.
+  </p>
+
+
+  <p>
+    The modified configuration used butterfly-shaped elements with changing
+    orientation along the channel. The alternating geometry forces the flow
+    to repeatedly redistribute around the insert openings rather than
+    following a simple fully developed path.
+  </p>
+
+
+
+  <figure class="feature-figure">
+
+    <div class="feature-figure-media">
+
+      <img
+        src="minichannel-geometry.png"
+        alt="Modified butterfly insert geometry and minichannel computational domain">
+
+    </div>
+
+
+    <figcaption class="feature-caption">
+
+      <strong>
+        Modified butterfly insert geometry
+      </strong>
+
+      <p>
+        Geometry used to generate repeated changes in flow orientation
+        through the minichannel. Consecutive butterfly elements are oriented
+        differently to promote mixing and boundary-layer disruption.
+      </p>
+
+    </figcaption>
+
+  </figure>
+
+
+
+  <div class="configuration-grid">
+
+
+    <div class="configuration-card">
+
+      <span class="configuration-label">
+        Baseline
+      </span>
+
+      <h3>
+        Plain Minichannel
+      </h3>
+
+      <p>
+        Channel without inserts used to establish baseline heat-transfer,
+        pressure-drop, and friction-factor behavior.
+      </p>
+
+    </div>
+
+
+
+    <div class="configuration-card">
+
+      <span class="configuration-label">
+        Modified Insert
+      </span>
+
+      <h3>
+        10 mm Pitch
+      </h3>
+
+      <p>
+        Modified butterfly elements spaced farther apart, producing periodic
+        flow redirection and thermal-boundary-layer disturbance.
+      </p>
+
+    </div>
+
+
+
+    <div class="configuration-card">
+
+      <span class="configuration-label">
+        Modified Insert
+      </span>
+
+      <h3>
+        5 mm Pitch
+      </h3>
+
+      <p>
+        More closely spaced elements produce more frequent changes in flow
+        orientation and repeated disruption of boundary-layer growth.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     NUMERICAL MODEL
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Numerical Method
+  </div>
+
+
+  <h2>
+    Three-dimensional conjugate heat-transfer model
+  </h2>
+
+
+  <p>
+    ANSYS Fluent 2021 R2 was used to solve the coupled fluid-flow and
+    heat-transfer problem. The computational model included conduction through
+    the copper heat-sink body and convection through water flowing inside the
+    minichannel.
+  </p>
+
+
+
+  <div class="minichannel-method-grid">
+
+
+    <div class="minichannel-method-card">
+
+      <h3>
+        Flow Model
+      </h3>
+
+      <p>
+        Steady, laminar, incompressible flow was modeled over Reynolds
+        numbers from 200 to 900.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-method-card">
+
+      <h3>
+        Conjugate Heat Transfer
+      </h3>
+
+      <p>
+        Solid conduction through the copper substrate was coupled with
+        convective heat transfer through the internal water flow.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-method-card">
+
+      <h3>
+        Numerical Solver
+      </h3>
+
+      <p>
+        SIMPLE pressure-velocity coupling was used with second-order
+        discretization of the governing equations.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-method-card">
+
+      <h3>
+        Mesh Strategy
+      </h3>
+
+      <p>
+        Hybrid wedge and hexahedral grids were refined near the fluid-solid
+        interface and around insert geometry where larger velocity and
+        temperature gradients were expected.
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <figure class="feature-figure">
+
+    <div class="feature-figure-media">
+
+      <img
+        src="minichannel-mesh.png"
+        alt="ANSYS Fluent computational meshes for the minichannel configurations">
+
+    </div>
+
+
+    <figcaption class="feature-caption">
+
+      <strong>
+        Computational mesh
+      </strong>
+
+      <p>
+        Representative computational grids for the baseline and
+        insert-enhanced geometries, with local refinement around solid-fluid
+        interfaces and butterfly insert features.
+      </p>
+
+    </figcaption>
+
+  </figure>
+
+</section>
+
+
+
+<!-- =========================================================
+     BOUNDARY CONDITIONS
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Boundary Conditions
+  </div>
+
+
+  <h2>
+    Thermal-fluid operating conditions
+  </h2>
+
+
+
+  <div class="minichannel-detail-list">
+
+
+    <div class="minichannel-detail-row">
+
+      <div class="minichannel-detail-title">
+        Coolant
+      </div>
+
+      <div class="minichannel-detail-description">
+        Deionized water entering the minichannel at 298 K.
+      </div>
+
+    </div>
+
+
+
+    <div class="minichannel-detail-row">
+
+      <div class="minichannel-detail-title">
+        Flow Condition
+      </div>
+
+      <div class="minichannel-detail-description">
+        Inlet velocity varied to produce Reynolds numbers between 200
+        and 900.
+      </div>
+
+    </div>
+
+
+
+    <div class="minichannel-detail-row">
+
+      <div class="minichannel-detail-title">
+        Heating
+      </div>
+
+      <div class="minichannel-detail-description">
+        Constant heat flux of 100 kW/m² applied to the heated surface.
+      </div>
+
+    </div>
+
+
+
+    <div class="minichannel-detail-row">
+
+      <div class="minichannel-detail-title">
+        Channel Walls
+      </div>
+
+      <div class="minichannel-detail-description">
+        No-slip velocity conditions and coupled thermal conditions at the
+        solid-fluid interfaces.
+      </div>
+
+    </div>
+
+
+
+    <div class="minichannel-detail-row">
+
+      <div class="minichannel-detail-title">
+        Outlet
+      </div>
+
+      <div class="minichannel-detail-description">
+        Pressure-outlet boundary condition.
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     GRID CONVERGENCE
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Verification
+  </div>
+
+
+  <h2>
+    Mesh-independence analysis
+  </h2>
+
+
+  <p>
+    Grid-convergence studies were completed before interpreting geometry
+    effects. Pressure drop and average heat-transfer coefficient were
+    monitored while mesh density was increased.
+  </p>
+
+
+
+  <div class="minichannel-result-grid">
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        2.5M
+      </span>
+
+      <h3>
+        Plain Channel
+      </h3>
+
+      <p>
+        Approximate cell count used for the grid-independent baseline
+        minichannel solution.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        1.6M
+      </span>
+
+      <h3>
+        10 mm Pitch
+      </h3>
+
+      <p>
+        Approximate grid-independent mesh size for the 10 mm modified
+        butterfly-insert geometry.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        4.32M
+      </span>
+
+      <h3>
+        5 mm Pitch
+      </h3>
+
+      <p>
+        The more densely repeated insert geometry required additional mesh
+        resolution.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VALIDATION
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Validation
+  </div>
+
+
+  <h2>
+    Comparison with established correlations
+  </h2>
+
+
+  <p>
+    The baseline plain-minichannel model was compared with established
+    pressure-drop and heat-transfer correlations before interpreting the
+    modified geometry results.
+  </p>
+
+
+
+  <div class="minichannel-result-grid">
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        1.67%
+      </span>
+
+      <h3>
+        Pressure Drop
+      </h3>
+
+      <p>
+        Maximum deviation between the CFD prediction and the comparison
+        pressure-drop correlation.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        10.45%
+      </span>
+
+      <h3>
+        Local Nusselt Number
+      </h3>
+
+      <p>
+        Maximum deviation between the numerical local Nusselt number and
+        the corresponding literature correlation.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        Re 500
+      </span>
+
+      <h3>
+        Verification Condition
+      </h3>
+
+      <p>
+        Representative Reynolds number used for the detailed grid and
+        numerical validation studies.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VELOCITY FIELDS
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Flow-Field Results
+  </div>
+
+
+  <h2>
+    Insert geometry redistributes the high-velocity region
+  </h2>
+
+
+  <p>
+    The butterfly elements locally accelerate and redirect the coolant near
+    different angular positions of the channel wall. As the insert
+    orientation changes downstream, the location of the high-velocity zone
+    also changes.
+  </p>
+
+
+  <p>
+    This repeated redistribution prevents the near-wall velocity field from
+    simply developing into an undisturbed profile and promotes additional
+    interaction between the channel core and wall region.
+  </p>
+
+
+
+  <div class="cfd-comparison">
+
+
+    <figure class="cfd-card">
+
+      <div class="cfd-media">
+
+        <img
+          src="Velocity-5.png"
+          alt="Velocity contour for modified butterfly insert configuration with 5 mm pitch">
+
+      </div>
+
+
+      <figcaption class="cfd-caption">
+
+        <span class="cfd-caption-label">
+          5 mm Pitch
+        </span>
+
+        <h3>
+          Velocity Distribution
+        </h3>
+
+        <p>
+          Closely spaced butterfly elements produce frequent regions of
+          local acceleration and flow redirection near the channel walls.
+        </p>
+
+      </figcaption>
+
+    </figure>
+
+
+
+    <figure class="cfd-card">
+
+      <div class="cfd-media">
+
+        <img
+          src="velocity-10.png"
+          alt="Velocity contour for modified butterfly insert configuration with 10 mm pitch">
+
+      </div>
+
+
+      <figcaption class="cfd-caption">
+
+        <span class="cfd-caption-label">
+          10 mm Pitch
+        </span>
+
+        <h3>
+          Velocity Distribution
+        </h3>
+
+        <p>
+          Wider spacing produces the same physical flow-redirection mechanism
+          with more distance available for redevelopment between insert
+          locations.
+        </p>
+
+      </figcaption>
+
+    </figure>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TEMPERATURE CONTOURS
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Thermal Results
+  </div>
+
+
+  <h2>
+    Repeated thermal-boundary-layer disruption
+  </h2>
+
+
+  <p>
+    The corresponding temperature fields show how the altered velocity
+    distribution influences heat transfer. Near the butterfly elements,
+    the thermal boundary layer becomes thinner as cooler core fluid is
+    redistributed toward portions of the heated channel wall.
+  </p>
+
+
+
+  <div class="cfd-comparison">
+
+
+    <figure class="cfd-card">
+
+      <div class="cfd-media">
+
+        <img
+          src="Temperature-5.png"
+          alt="Temperature contour for modified butterfly insert configuration with 5 mm pitch">
+
+      </div>
+
+
+      <figcaption class="cfd-caption">
+
+        <span class="cfd-caption-label">
+          5 mm Pitch
+        </span>
+
+        <h3>
+          Temperature Distribution
+        </h3>
+
+        <p>
+          More frequent insert interactions repeatedly interrupt thermal
+          boundary-layer development along the heated channel.
+        </p>
+
+      </figcaption>
+
+    </figure>
+
+
+
+    <figure class="cfd-card">
+
+      <div class="cfd-media">
+
+        <img
+          src="Temp-10.png"
+          alt="Temperature contour for modified butterfly insert configuration with 10 mm pitch">
+
+      </div>
+
+
+      <figcaption class="cfd-caption">
+
+        <span class="cfd-caption-label">
+          10 mm Pitch
+        </span>
+
+        <h3>
+          Temperature Distribution
+        </h3>
+
+        <p>
+          The larger pitch produces similar localized boundary-layer
+          disruption but at fewer locations along a given channel length.
+        </p>
+
+      </figcaption>
+
+    </figure>
+
+
+  </div>
+
+
+
+  <div class="engineering-callout">
+
+    <h3>
+      Physical mechanism
+    </h3>
+
+    <p>
+      Alternating butterfly orientation shifts regions of elevated velocity
+      toward different wall locations as the fluid progresses downstream.
+      This promotes mixing between cooler core fluid and warmer near-wall
+      fluid while repeatedly interrupting thermal-boundary-layer growth.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HEAT TRANSFER
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Heat-Transfer Performance
+  </div>
+
+
+  <h2>
+    Quantifying heat-transfer enhancement
+  </h2>
+
+
+  <p>
+    Both modified insert configurations increased heat transfer relative
+    to the plain minichannel. The 5 mm pitch configuration generated the
+    strongest enhancement because the coolant encountered flow disturbances
+    more frequently.
+  </p>
+
+
+
+  <div class="minichannel-result-grid">
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        3.95×
+      </span>
+
+      <h3>
+        Maximum Nu/Nu₀
+      </h3>
+
+      <p>
+        Maximum Nusselt-number enhancement ratio for the 5 mm modified
+        butterfly-insert configuration.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        2.49×
+      </span>
+
+      <h3>
+        10 mm Pitch
+      </h3>
+
+      <p>
+        Maximum Nusselt-number enhancement ratio for the wider-spaced
+        modified configuration.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        +31%
+      </span>
+
+      <h3>
+        Heat-Transfer Gain
+      </h3>
+
+      <p>
+        Maximum improvement in Nusselt-number enhancement for the 5 mm
+        modified geometry relative to the corresponding conventional
+        butterfly-insert case.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     HYDRAULIC TRADEOFF
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Hydraulic Tradeoff
+  </div>
+
+
+  <h2>
+    Higher mixing also increases flow resistance
+  </h2>
+
+
+  <p>
+    Flow redirection through the internal inserts increases the resistance
+    encountered by the coolant. The smaller insert pitch therefore produces
+    both stronger heat-transfer enhancement and a larger pressure-drop
+    penalty.
+  </p>
+
+
+
+  <div class="minichannel-result-grid">
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        3.12–4.97
+      </span>
+
+      <h3>
+        10 mm f/f₀
+      </h3>
+
+      <p>
+        Friction-factor enhancement ratio over the investigated
+        Reynolds-number range.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        3.60–6.89
+      </span>
+
+      <h3>
+        5 mm f/f₀
+      </h3>
+
+      <p>
+        Higher resistance accompanies the more frequent flow disturbance
+        created by the smaller insert pitch.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        Re 900
+      </span>
+
+      <h3>
+        Highest Resistance
+      </h3>
+
+      <p>
+        The largest hydraulic penalty occurred at the highest Reynolds
+        number investigated.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PEC
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Thermohydraulic Performance
+  </div>
+
+
+  <h2>
+    Balancing heat-transfer benefit against pressure-drop penalty
+  </h2>
+
+
+  <p>
+    Heat-transfer enhancement alone does not establish whether a passive
+    insert is beneficial. Performance Evaluation Criteria (PEC) was used
+    to combine the improvement in Nusselt number with the associated
+    friction-factor penalty.
+  </p>
+
+
+
+  <div class="minichannel-result-grid">
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        2.07
+      </span>
+
+      <h3>
+        Peak PEC
+      </h3>
+
+      <p>
+        Maximum overall thermohydraulic performance obtained by the
+        5 mm modified-insert configuration.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        1.46
+      </span>
+
+      <h3>
+        10 mm Peak PEC
+      </h3>
+
+      <p>
+        Maximum PEC obtained by the wider-spaced modified insert geometry.
+      </p>
+
+    </div>
+
+
+
+    <div class="minichannel-result-card">
+
+      <span class="minichannel-result-number">
+        +28%
+      </span>
+
+      <h3>
+        Overall Improvement
+      </h3>
+
+      <p>
+        Maximum PEC improvement of the 5 mm modified configuration relative
+        to the corresponding conventional butterfly-insert configuration.
+      </p>
+
+    </div>
+
+
+  </div>
+
+
+
+  <div class="engineering-callout">
+
+    <h3>
+      Engineering takeaway
+    </h3>
+
+    <p>
+      Reducing the insert pitch increases pressure loss, but the additional
+      heat-transfer enhancement generated by the 5 mm configuration is large
+      enough to produce the strongest overall thermohydraulic performance
+      among the configurations investigated.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ENGINEERING SCOPE
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Engineering Scope
+  </div>
+
+
+  <h2>
+    What this project demonstrates
+  </h2>
+
+
+
+  <div class="takeaway-grid">
+
+
+    <div class="takeaway">
+
+      <h3>
+        CFD Model Development
+      </h3>
+
+      <p>
+        Three-dimensional modeling of coupled solid conduction and internal
+        fluid convection using ANSYS Fluent.
+      </p>
+
+    </div>
+
+
+
+    <div class="takeaway">
+
+      <h3>
+        Verification &amp; Validation
+      </h3>
+
+      <p>
+        Mesh-convergence analysis and comparison against established
+        pressure-drop and heat-transfer correlations before interpreting
+        geometry effects.
+      </p>
+
+    </div>
+
+
+
+    <div class="takeaway">
+
+      <h3>
+        Engineering Interpretation
+      </h3>
+
+      <p>
+        Connected velocity and temperature fields to boundary-layer
+        disruption, mixing, pressure loss, and overall thermohydraulic
+        performance.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TOOLS
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Technical Methods
+  </div>
+
+
+  <h2>
+    Tools &amp; Methods
+  </h2>
+
+
+
+  <div class="tags">
+
+    <span class="tag">
+      ANSYS Fluent
+    </span>
+
+    <span class="tag">
+      CFD
+    </span>
+
+    <span class="tag">
+      Conjugate Heat Transfer
+    </span>
+
+    <span class="tag">
+      Finite Volume Method
+    </span>
+
+    <span class="tag">
+      Mesh Convergence
+    </span>
+
+    <span class="tag">
+      Heat Transfer
+    </span>
+
+    <span class="tag">
+      Laminar Flow
+    </span>
+
+    <span class="tag">
+      Nusselt Number
+    </span>
+
+    <span class="tag">
+      Pressure Drop
+    </span>
+
+    <span class="tag">
+      Performance Evaluation Criteria
+    </span>
+
+    <span class="tag">
+      Numerical Validation
+    </span>
+
+    <span class="tag">
+      Thermal Management
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PUBLICATION
+========================================================= -->
+
+<section class="project-section">
+
+  <div class="section-eyebrow">
+    Publication
+  </div>
+
+
+  <h2>
+    Related Conference Paper
+  </h2>
+
+
+
+  <div class="minichannel-publication">
+
+    <h3>
+      Computer Simulations on Heat Transfer Enhancement in a
+      Minichannel Heat Sink using Modified Butterfly Inserts
+    </h3>
+
+
+    <p>
+      <strong>
+        Aritri Halder
+      </strong>,
+      Rahul Pandey, and Umesh Madanan
+    </p>
+
+
+    <p>
+      ISHMT-ASTFE Heat and Mass Transfer Conference.
+    </p>
+
+  </div>
+
+</section>
+
+
 </main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer class="footer">
-  <div class="container">© 2026 Aritri Halder. Built as a simple academic and engineering portfolio.</div>
+
+  <div class="container">
+    © 2026 Aritri Halder · Mechanical Engineering Portfolio
+  </div>
+
 </footer>
-</body></html>
+
+
+</body>
+
+</html>
