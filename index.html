@@ -20,6 +20,44 @@
 
   <link rel="stylesheet" href="styles.css">
 
+
+  <!--
+  ============================================================
+  HOMEPAGE-ONLY IMAGE FIX
+
+  This keeps the CFD image fully visible inside the project
+  card instead of cropping it.
+
+  It does NOT modify the shared styles.css file.
+  ============================================================
+  -->
+
+  <style>
+
+    .card-media.cfd-card-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 12px;
+
+      background: #f4f7fa;
+    }
+
+
+    .card-media.cfd-card-image img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: contain;
+
+      object-position: center;
+
+      display: block;
+    }
+
+  </style>
+
 </head>
 
 
@@ -60,6 +98,10 @@
 
       <a href="#education">
         Education
+      </a>
+
+      <a href="#skills">
+        Skills
       </a>
 
       <a href="#about">
@@ -133,11 +175,13 @@
           View selected work
         </a>
 
+
         <a
           class="btn secondary"
           href="cv.html">
           View CV
         </a>
+
 
         <a
           class="btn secondary"
@@ -152,7 +196,7 @@
 
 
 
-    <!-- Technical focus -->
+    <!-- Right side -->
 
     <aside
       class="hero-summary"
@@ -213,7 +257,7 @@
 
 
 <!-- =========================================================
-     PROJECTS
+     SELECTED PROJECTS
 ========================================================= -->
 
 <section id="projects">
@@ -250,13 +294,15 @@
 
       <!-- ===================================================
            PROJECT 1
+           20 kW BURNER
       ==================================================== -->
 
       <article class="card">
 
         <a
           class="card-media"
-          href="project-20kw-furnace.html">
+          href="project-20kw-furnace.html"
+          aria-label="View 20 kW burner project">
 
           <img
             src="Jet-swirl%20burner%20with%20Quartz%20tube.jpeg"
@@ -298,15 +344,25 @@
 
           <div class="tags">
 
-            <span class="tag">SolidWorks</span>
+            <span class="tag">
+              SolidWorks
+            </span>
 
-            <span class="tag">GD&amp;T</span>
+            <span class="tag">
+              GD&amp;T
+            </span>
 
-            <span class="tag">DFM/DFA</span>
+            <span class="tag">
+              DFM/DFA
+            </span>
 
-            <span class="tag">LabVIEW</span>
+            <span class="tag">
+              LabVIEW
+            </span>
 
-            <span class="tag">PIV</span>
+            <span class="tag">
+              PIV
+            </span>
 
           </div>
 
@@ -325,13 +381,15 @@
 
       <!-- ===================================================
            PROJECT 2
+           PIV + CTC
       ==================================================== -->
 
       <article class="card">
 
         <a
           class="card-media"
-          href="project-ct-system.html">
+          href="project-ct-system.html"
+          aria-label="View optical diagnostics project">
 
           <img
             src="CTC-setup-actual.jpeg"
@@ -373,15 +431,25 @@
 
           <div class="tags">
 
-            <span class="tag">PIV</span>
+            <span class="tag">
+              PIV
+            </span>
 
-            <span class="tag">CTC</span>
+            <span class="tag">
+              CTC
+            </span>
 
-            <span class="tag">Laser Diagnostics</span>
+            <span class="tag">
+              Laser Diagnostics
+            </span>
 
-            <span class="tag">Python</span>
+            <span class="tag">
+              Python
+            </span>
 
-            <span class="tag">MATLAB</span>
+            <span class="tag">
+              MATLAB
+            </span>
 
           </div>
 
@@ -400,17 +468,25 @@
 
       <!-- ===================================================
            PROJECT 3
+           MINICHANNEL CFD
+
+           NOTE:
+           Filename is case-sensitive:
+           Velocity-5.png
       ==================================================== -->
 
       <article class="card">
 
-        <div class="placeholder">
+        <a
+          class="card-media cfd-card-image"
+          href="project-minichannel.html"
+          aria-label="View minichannel CFD project">
 
-          <span>
-            CFD geometry / contour figure
-          </span>
+          <img
+            src="Velocity-5.png"
+            alt="ANSYS Fluent velocity contour for the 5 mm pitch modified butterfly-insert minichannel">
 
-        </div>
+        </a>
 
 
         <div class="card-body">
@@ -427,8 +503,8 @@
 
           <p>
             Investigated modified butterfly inserts for passive
-            heat-transfer enhancement using three-dimensional conjugate
-            heat-transfer simulations in ANSYS Fluent.
+            heat-transfer enhancement using three-dimensional
+            conjugate heat-transfer simulations in ANSYS Fluent.
           </p>
 
 
@@ -439,20 +515,29 @@
             </strong>
 
             Mesh convergence, numerical validation, conjugate heat transfer,
-            pressure-drop analysis, and thermohydraulic optimization.
+            flow-field analysis, pressure-drop evaluation, and
+            thermohydraulic optimization.
 
           </div>
 
 
           <div class="tags">
 
-            <span class="tag">ANSYS Fluent</span>
+            <span class="tag">
+              ANSYS Fluent
+            </span>
 
-            <span class="tag">CFD</span>
+            <span class="tag">
+              CFD
+            </span>
 
-            <span class="tag">Heat Transfer</span>
+            <span class="tag">
+              Heat Transfer
+            </span>
 
-            <span class="tag">Mesh Convergence</span>
+            <span class="tag">
+              Mesh Convergence
+            </span>
 
           </div>
 
@@ -517,7 +602,7 @@
       <div class="timeline-item">
 
         <div class="timeline-date">
-          Oct 2023 - Present
+          Oct 2024 - Present
         </div>
 
 
@@ -545,7 +630,7 @@
 
 
 
-      <!-- Jadavpur University -->
+      <!-- Jadavpur -->
 
       <div class="timeline-item">
 
@@ -652,6 +737,8 @@
     <div class="pub-list">
 
 
+      <!-- Publication 1 -->
+
       <div class="pub">
 
         <div class="pub-title">
@@ -667,6 +754,8 @@
       </div>
 
 
+
+      <!-- Publication 2 -->
 
       <div class="pub">
 
@@ -684,6 +773,8 @@
 
 
 
+      <!-- In progress -->
+
       <div class="pub">
 
         <div class="pub-title">
@@ -698,6 +789,8 @@
       </div>
 
 
+
+      <!-- Presentations -->
 
       <div class="pub">
 
@@ -714,6 +807,8 @@
       </div>
 
 
+
+      <!-- Service -->
 
       <div class="pub">
 
@@ -770,7 +865,7 @@
       <div class="education-card">
 
         <div class="education-date">
-          Expected January 2027
+          Expected June 2027
         </div>
 
         <h3>
@@ -886,8 +981,9 @@
 
         <p>
           PIV, FTIR spectroscopy, chemiluminescence imaging,
-          computed tomography of chemiluminescence, Python, MATLAB,
-          image processing, statistics, and workflow automation.
+          computed tomography of chemiluminescence,
+          Python, MATLAB, image processing, statistics,
+          and workflow automation.
         </p>
 
       </div>
@@ -971,6 +1067,7 @@
 
         <ul class="info-list">
 
+
           <li>
 
             <strong>
@@ -1013,6 +1110,7 @@
             4th Symposium on Ammonia Energy
 
           </li>
+
 
         </ul>
 
